@@ -1,0 +1,43 @@
+CIC-IDS2018 BASELINE MODEL ANALYSIS
+============================================================
+
+Primary evaluation criterion: Macro-F1
+Secondary criteria: Balanced Accuracy, Macro Recall, Macro Precision, Weighted-F1, Accuracy
+
+BASELINE RANKING
+------------------------------------------------------------
+1. B1_undersampled_RandomForest | Model=RandomForest | Strategy=B1_undersampled | Macro-F1=0.760217 | Balanced Accuracy=0.779587 | Macro Precision=0.752717 | Macro Recall=0.779587 | Weighted F1=0.945773 | Accuracy=0.929499
+2. B2_hybrid_RandomForest | Model=RandomForest | Strategy=B2_hybrid | Macro-F1=0.748753 | Balanced Accuracy=0.786789 | Macro Precision=0.730306 | Macro Recall=0.786789 | Weighted F1=0.945668 | Accuracy=0.929336
+3. B0_original_RandomForest | Model=RandomForest | Strategy=B0_original | Macro-F1=0.745864 | Balanced Accuracy=0.795598 | Macro Precision=0.726683 | Macro Recall=0.795598 | Weighted F1=0.933023 | Accuracy=0.906411
+4. B1_undersampled_XGBoost | Model=XGBoost | Strategy=B1_undersampled | Macro-F1=0.728479 | Balanced Accuracy=0.751608 | Macro Precision=0.712881 | Macro Recall=0.751608 | Weighted F1=0.959373 | Accuracy=0.952201
+5. B0_original_XGBoost | Model=XGBoost | Strategy=B0_original | Macro-F1=0.699822 | Balanced Accuracy=0.815759 | Macro Precision=0.686685 | Macro Recall=0.815759 | Weighted F1=0.871076 | Accuracy=0.805381
+6. B2_hybrid_XGBoost | Model=XGBoost | Strategy=B2_hybrid | Macro-F1=0.689905 | Balanced Accuracy=0.772213 | Macro Precision=0.667465 | Macro Recall=0.772213 | Weighted F1=0.958980 | Accuracy=0.951455
+
+BEST RESULT BY METRIC
+------------------------------------------------------------
+Accuracy: B1_undersampled_XGBoost (0.952201)
+Balanced_Accuracy: B0_original_XGBoost (0.815759)
+Macro_Precision: B1_undersampled_RandomForest (0.752717)
+Macro_Recall: B0_original_XGBoost (0.815759)
+Macro_F1: B1_undersampled_RandomForest (0.760217)
+Weighted_F1: B1_undersampled_XGBoost (0.959373)
+
+CANDIDATE BASELINE FOR NEXT STAGE
+------------------------------------------------------------
+Experiment: B1_undersampled_RandomForest
+Model: RandomForest
+Strategy: B1_undersampled
+Macro-F1: 0.760217
+Balanced Accuracy: 0.779587
+
+STATISTICAL LIMITATION
+------------------------------------------------------------
+The baseline experiments were evaluated on the same fixed validation dataset. Step 18 provides aggregate metrics, per-class metrics, and confusion matrices, but does not retain sample-level prediction vectors required for paired prediction-level significance tests such as McNemar's test. Therefore, Step 19 reports descriptive comparisons, absolute differences, relative improvements, class-wise analysis, and Pareto-style comparisons rather than claiming statistical significance. A future repeated or cross-validation experiment can be used for formal statistical significance testing.
+
+TEST DATA STATUS
+------------------------------------------------------------
+The CIC-IDS2018 test dataset was not loaded or evaluated during Step 19.
+
+NEXT STAGE
+------------------------------------------------------------
+Hyperparameter optimization and controlled model improvement should be performed using the training data and validation data only. The test dataset must remain untouched until the final locked model is selected.

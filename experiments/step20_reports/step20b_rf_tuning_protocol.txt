@@ -1,0 +1,137 @@
+STEP 20B
+EVIDENCE-BASED RANDOM FOREST HYPERPARAMETER OPTIMIZATION DESIGN
+================================================================
+
+PROJECT
+-------
+Behaviour Based Network Attack Detection System using Machine Learning
+
+DATASET STAGE
+-------------
+CIC-IDS2018
+
+CURRENT BASELINE
+----------------
+B1 undersampled Random Forest
+
+STEP 20A FINDINGS
+-----------------
+The baseline error analysis identified severe class-level weaknesses.
+
+Most important difficult classes include:
+
+1. Infiltration
+2. FTP-BruteForce
+3. DoS attacks-SlowHTTPTest
+4. SQL Injection
+5. Brute Force -Web
+
+The dominant confusion pattern is:
+
+BENIGN -> Infiltration
+and
+Infiltration -> BENIGN
+
+This indicates that the principal problem is not simply overall
+classification accuracy. The key research problem is minority/difficult
+class discrimination.
+
+TUNING OBJECTIVE
+----------------
+Improve multiclass generalization and minority-class recognition while
+avoiding degradation of the strong majority-class performance.
+
+PRIMARY OPTIMIZATION METRIC
+---------------------------
+Macro F1
+
+WHY MACRO F1?
+-------------
+Accuracy and weighted F1 are dominated by large classes such as BENIGN.
+Macro F1 gives every class equal importance and therefore better reflects
+the actual multiclass IDS objective.
+
+SECONDARY METRICS
+-----------------
+- Balanced Accuracy
+- Macro Recall
+- Macro Precision
+- Weighted F1
+
+CRITICAL CLASS METRICS
+----------------------
+- Infiltration F1
+- Infiltration Recall
+- FTP-BruteForce F1
+- DoS attacks-SlowHTTPTest F1
+- SQL Injection F1
+- Brute Force -Web F1
+
+SEARCH SPACE
+------------
+n_estimators:
+    300, 500, 800
+
+max_depth:
+    None, 20, 30, 40
+
+min_samples_split:
+    2, 5, 10
+
+min_samples_leaf:
+    1, 2, 5
+
+max_features:
+    sqrt, log2, 0.5
+
+criterion:
+    gini, entropy
+
+class_weight:
+    None, balanced, balanced_subsample
+
+bootstrap:
+    True
+
+min_impurity_decrease:
+    0, 1e-7, 1e-6
+
+VALIDATION POLICY
+-----------------
+Hyperparameter optimization must use training/validation data only.
+
+The untouched test set must NOT be used to select hyperparameters.
+
+REPRODUCIBILITY
+---------------
+random_state = 42
+n_jobs = -1
+
+NEXT EXPERIMENT
+---------------
+The next step should execute controlled Random Forest optimization using
+this predefined search space.
+
+The final model must not be selected using test-set performance.
+
+EXTERNAL VALIDATION
+-------------------
+UNSW-NB15 remains reserved for the external validation stage after the
+final model has been locked.
+
+CICIoT2023 remains the primary IoT dataset in the overall research
+architecture.
+
+RESEARCH INTERPRETATION
+-----------------------
+The purpose of tuning is not to maximize accuracy.
+
+The purpose is to determine whether controlled Random Forest complexity
+and class-aware learning can improve difficult attack-class recognition,
+particularly Infiltration and rare web/brute-force/slow-DoS classes,
+without causing unacceptable degradation of the overall multiclass
+classifier.
+
+NO MODEL WAS TRAINED IN STEP 20B.
+NO TEST DATA WAS USED IN STEP 20B.
+NO HYPERPARAMETER OPTIMIZATION WAS EXECUTED IN STEP 20B.

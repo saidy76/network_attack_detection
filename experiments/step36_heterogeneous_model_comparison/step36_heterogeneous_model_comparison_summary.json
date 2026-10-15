@@ -1,0 +1,62 @@
+{
+  "step": 36,
+  "title": "Heterogeneous Model Comparison",
+  "research_project": "Behaviour Based Network Attack Detection System using Machine Learning",
+  "protocol": {
+    "validation_only": true,
+    "test_set_used": false,
+    "additional_training": false,
+    "hyperparameter_optimization": false,
+    "primary_selection_metric": "Macro F1",
+    "secondary_metrics": [
+      "Balanced Accuracy",
+      "Macro Precision",
+      "Macro Recall",
+      "Weighted F1"
+    ]
+  },
+  "models": [
+    "Tuned Random Forest",
+    "Tuned XGBoost",
+    "Controlled LightGBM"
+  ],
+  "primary_validation_winner": {
+    "model": "Tuned Random Forest",
+    "macro_f1": 0.7904989762654928
+  },
+  "macro_f1": {
+    "Tuned Random Forest": 0.7904989762654928,
+    "Tuned XGBoost": 0.7418650228249453,
+    "Controlled LightGBM": 0.2887118687326454
+  },
+  "macro_f1_gaps_vs_rf": {
+    "XGBoost": -0.04863395344054755,
+    "LightGBM": -0.5017871075328474
+  },
+  "infiltration": {
+    "support": 21091,
+    "RF_F1": 0.3284243915069912,
+    "RF_Recall": 0.4811056848892893,
+    "RF_Precision": 0.2493059138596103,
+    "XGB_F1": 0.3164041994750656,
+    "XGB_Recall": 0.45725664975582,
+    "XGB_Precision": 0.2418921969449948,
+    "LightGBM_F1": 0.050461724781753,
+    "LightGBM_Recall": 0.1185339718363282,
+    "LightGBM_Precision": 0.0320537477241839
+  },
+  "ensemble_recommendation": {
+    "primary_candidate": "RF + XGBoost",
+    "lightgbm_inclusion": "Not automatically justified",
+    "decision_basis": "Validation performance and complementary error behaviour; prediction-level complementarity should be verified when aligned validation predictions are available."
+  },
+  "research_findings": [
+    "Random Forest remains the strongest validation model by Macro F1.",
+    "XGBoost provides a distinct heterogeneous tree-learning perspective and demonstrates different class-level behaviour.",
+    "LightGBM performs substantially below RF and XGBoost in the current controlled configuration.",
+    "Infiltration remains the most important substantial-support difficult class and must receive special attention in subsequent ensemble evaluation.",
+    "Extremely rare classes must not dominate model-selection conclusions because their validation support is very small.",
+    "Accuracy alone is not sufficient for final model selection under the severe multiclass imbalance present in this dataset.",
+    "Step 37 must therefore evaluate whether heterogeneous probability fusion actually improves class-balanced performance rather than assuming ensemble superiority."
+  ]
+}

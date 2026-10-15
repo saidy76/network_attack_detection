@@ -1,0 +1,50 @@
+{
+    "step": 29,
+    "purpose": "Audit feasibility of reconstructing chronological B1 training sequences using recovered original timestamps.",
+    "b1_rows": 1044091,
+    "unique_mapped_rows": 1042521,
+    "valid_unique_timestamps": 1042521,
+    "invalid_unique_timestamps": 0,
+    "full_b1_valid_timestamps": 1042521,
+    "full_b1_missing_timestamps": 1570,
+    "temporal_coverage_rate": 0.9984962996520418,
+    "original_b1_order": {
+        "negative_differences": 0,
+        "zero_differences": 1042520,
+        "positive_differences": 0,
+        "nondecreasing": true
+    },
+    "chronological_order": {
+        "rows": 1042521,
+        "negative_differences": 0,
+        "zero_differences": 1042520,
+        "positive_differences": 0,
+        "nondecreasing": true
+    },
+    "timestamp_ties": {
+        "unique_timestamp_count": 1,
+        "duplicate_timestamp_groups": 1,
+        "rows_in_duplicate_timestamp_groups": 1042521,
+        "maximum_rows_same_timestamp": 1042521
+    },
+    "time_gaps_seconds": {
+        "minimum_positive_gap": null,
+        "maximum_positive_gap": null,
+        "median_positive_gap": null,
+        "p95_positive_gap": null,
+        "large_gap_threshold_seconds": 60.0,
+        "large_gap_count": 0
+    },
+    "sequence_feasibility": {
+        "sequence_length": 10,
+        "possible_overlapping_sequences": 1042512,
+        "windows_evaluated": 1042512,
+        "windows_with_large_gap": 0
+    },
+    "temporal_feasibility_status": "INCOMPLETE_TIMESTAMP_RECOVERY",
+    "step28_timestamp_recovery_rate": 1.0,
+    "step28b_same_timestamp_rate": 1.0,
+    "step28b_different_timestamp_rate": 0.0,
+    "load_time_seconds": 6.7115561962127686,
+    "runtime_seconds": 20.693882942199707
+}

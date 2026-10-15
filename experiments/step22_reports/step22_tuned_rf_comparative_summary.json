@@ -1,0 +1,35 @@
+{
+    "step": "22",
+    "status": "completed",
+    "purpose": "evidence_based_tuned_random_forest_comparison",
+    "methodological_integrity": {
+        "model_retraining": false,
+        "test_data_used": false,
+        "feature_selection": false,
+        "balancing": false,
+        "hyperparameter_tuning": false,
+        "new_train_validation_split": false,
+        "existing_artifacts_only": true
+    },
+    "baseline_experiment": "B1_undersampled_RandomForest",
+    "tuned_experiment": "Step21_Tuned_RandomForest",
+    "primary_metric": "Macro_F1",
+    "baseline_macro_f1": 0.7602174722108809,
+    "tuned_macro_f1": 0.7904989762654928,
+    "macro_f1_absolute_change": 0.03028150405461194,
+    "macro_f1_change_percentage_points": 3.028150405461194,
+    "baseline_balanced_accuracy": 0.7795865929080004,
+    "tuned_balanced_accuracy": 0.7909960318842203,
+    "balanced_accuracy_absolute_change": 0.011409438976219932,
+    "balanced_accuracy_change_percentage_points": 1.1409438976219932,
+    "macro_f1_improved": true,
+    "balanced_accuracy_improved": true,
+    "difficult_classes_analyzed": [
+        "Brute Force -Web",
+        "DoS attacks-SlowHTTPTest",
+        "FTP-BruteForce",
+        "Infiltration",
+        "SQL Injection"
+    ],
+    "next_stage": "STEP 23 - controlled XGBoost improvement and evaluation"
+}

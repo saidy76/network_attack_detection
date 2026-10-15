@@ -1,0 +1,15 @@
+Class_ID,Label,Support,RF_Error_Count,XGB_Error_Count,LGBM_Error_Count
+0,BENIGN,765908,30640,30298,243300
+1,Bot,21680,3,1,1296
+2,Brute Force -Web,84,29,37,84
+3,Brute Force -XSS,34,3,5,34
+4,DDOS attack-HOIC,29829,0,0,5985
+5,DDOS attack-LOIC-UDP,259,0,0,259
+6,DoS attacks-GoldenEye,6211,3,4,984
+7,DoS attacks-Hulk,21780,2,0,6163
+8,DoS attacks-SlowHTTPTest,9,7,6,9
+9,DoS attacks-Slowloris,1486,2,2,1486
+10,FTP-BruteForce,8,8,8,8
+11,Infiltration,21091,10944,11447,18591
+12,SQL Injection,13,2,6,13
+13,SSH-Bruteforce,14107,0,2,529

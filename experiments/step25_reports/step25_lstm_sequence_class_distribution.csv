@@ -1,0 +1,15 @@
+Class_ID,Label,Training_Sequences,Validation_Sequences
+0,BENIGN,499996,765900
+1,Bot,101174,21680
+2,Brute Force -Web,388,84
+3,Brute Force -XSS,160,34
+4,DDOS attack-HOIC,139201,29828
+5,DDOS attack-LOIC-UDP,1211,259
+6,DoS attacks-GoldenEye,28984,6211
+7,DoS attacks-Hulk,101638,21780
+8,DoS attacks-SlowHTTPTest,38,9
+9,DoS attacks-Slowloris,6936,1486
+10,FTP-BruteForce,38,8
+11,Infiltration,98426,21091
+12,SQL Injection,59,13
+13,SSH-Bruteforce,65833,14107

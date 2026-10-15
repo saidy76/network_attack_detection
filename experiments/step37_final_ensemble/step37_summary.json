@@ -1,0 +1,73 @@
+{
+    "project": "Behaviour Based Network Attack Detection System using Machine Learning",
+    "step": 37,
+    "step_title": "Final RF + XGBoost Heterogeneous Ensemble Construction",
+    "dataset": "CIC-IDS2018",
+    "evaluation_split": "validation",
+    "test_set_used": false,
+    "training_performed": false,
+    "hyperparameter_optimization_performed": false,
+    "n_validation_samples": 882499,
+    "n_features": 30,
+    "n_classes": 14,
+    "class_mapping": {
+        "BENIGN": 0,
+        "Bot": 1,
+        "Brute Force -Web": 2,
+        "Brute Force -XSS": 3,
+        "DDOS attack-HOIC": 4,
+        "DDOS attack-LOIC-UDP": 5,
+        "DoS attacks-GoldenEye": 6,
+        "DoS attacks-Hulk": 7,
+        "DoS attacks-SlowHTTPTest": 8,
+        "DoS attacks-Slowloris": 9,
+        "FTP-BruteForce": 10,
+        "Infiltration": 11,
+        "SQL Injection": 12,
+        "SSH-Bruteforce": 13
+    },
+    "rf_class_representation": "string labels",
+    "xgb_class_representation": "numeric IDs",
+    "rf_model_path": "D:\\network_attack_detection\\experiments\\step21_rf_tuning\\step21_best_random_forest.joblib",
+    "xgb_model_path": "D:\\network_attack_detection\\experiments\\step23_xgb_tuning\\step23_best_xgboost.joblib",
+    "validation_path": "D:\\network_attack_detection\\data\\modeling\\CICIDS2018_validation_selected.csv",
+    "rf_baseline": {
+        "Accuracy": 0.9528124111188795,
+        "Balanced Accuracy": 0.7909960318842203,
+        "Macro Precision": 0.7993259925674925,
+        "Macro Recall": 0.7909960318842203,
+        "Macro F1": 0.7904989762654928,
+        "Weighted F1": 0.9599638953076722
+    },
+    "xgb_baseline": {
+        "Accuracy": 0.9526163769024101,
+        "Balanced Accuracy": 0.7642700299193443,
+        "Macro Precision": 0.7264548567933523,
+        "Macro Recall": 0.7642700299193443,
+        "Macro F1": 0.7418650228249453,
+        "Weighted F1": 0.9595988725619162
+    },
+    "best_validation_configuration": {
+        "model": "RF_1.0_XGB_0.0",
+        "rf_weight": 1.0,
+        "xgb_weight": 0.0,
+        "metrics": {
+            "Accuracy": 0.9528124111188795,
+            "Balanced Accuracy": 0.7909960318842203,
+            "Macro Precision": 0.7993259925674925,
+            "Macro Recall": 0.7909960318842203,
+            "Macro F1": 0.7904989762654928,
+            "Weighted F1": 0.9599638953076722
+        }
+    },
+    "rf_macro_f1": 0.7904989762654928,
+    "best_macro_f1": 0.7904989762654928,
+    "macro_f1_delta_vs_rf": 0.0,
+    "rf_balanced_accuracy": 0.7909960318842203,
+    "best_balanced_accuracy": 0.7909960318842203,
+    "balanced_accuracy_delta_vs_rf": 0.0,
+    "ensemble_improves_rf": false,
+    "ensemble_decision": "RF remains optimal; no XGBoost fusion weight improved RF.",
+    "final_candidate_after_step37": "Tuned Random Forest",
+    "runtime_seconds": 33.901715993881226
+}

@@ -1,0 +1,92 @@
+{
+    "step": "20A",
+    "status": "completed",
+    "purpose": "baseline_error_analysis",
+    "test_data_used": false,
+    "test_data_modified": false,
+    "model_retraining": false,
+    "feature_selection": false,
+    "balancing": false,
+    "hyperparameter_tuning": false,
+    "primary_metric": "Macro_F1",
+    "current_baseline_candidate": "B1_undersampled_RandomForest",
+    "current_baseline_metrics": {
+        "accuracy": 0.929499070253904,
+        "balanced_accuracy": 0.7795865929080004,
+        "macro_precision": 0.7527171300256877,
+        "macro_recall": 0.7795865929080004,
+        "macro_f1": 0.7602174722108809,
+        "weighted_f1": 0.945773181365959
+    },
+    "minority_summary": {
+        "minority_class_count": 8,
+        "minority_mean_f1": 0.6795990698887392,
+        "minority_median_f1": 0.8167420814479638,
+        "minority_min_f1": 0.0,
+        "minority_max_f1": 1.0
+    },
+    "difficult_class_count": 5,
+    "top_confusion_pairs": [
+        {
+            "True_Label": "BENIGN",
+            "Predicted_Label": "Infiltration",
+            "Misclassified_Count": 51286,
+            "Class_Error_Rate": 0.06696104492967823
+        },
+        {
+            "True_Label": "Infiltration",
+            "Predicted_Label": "BENIGN",
+            "Misclassified_Count": 10826,
+            "Class_Error_Rate": 0.5132995116400361
+        },
+        {
+            "True_Label": "BENIGN",
+            "Predicted_Label": "Brute Force -Web",
+            "Misclassified_Count": 33,
+            "Class_Error_Rate": 4.308611478140978e-05
+        },
+        {
+            "True_Label": "Brute Force -Web",
+            "Predicted_Label": "BENIGN",
+            "Misclassified_Count": 19,
+            "Class_Error_Rate": 0.2261904761904762
+        },
+        {
+            "True_Label": "BENIGN",
+            "Predicted_Label": "Bot",
+            "Misclassified_Count": 8,
+            "Class_Error_Rate": 1.0445118734887218e-05
+        },
+        {
+            "True_Label": "FTP-BruteForce",
+            "Predicted_Label": "DoS attacks-SlowHTTPTest",
+            "Misclassified_Count": 7,
+            "Class_Error_Rate": 0.875
+        },
+        {
+            "True_Label": "DoS attacks-SlowHTTPTest",
+            "Predicted_Label": "FTP-BruteForce",
+            "Misclassified_Count": 7,
+            "Class_Error_Rate": 0.7777777777777778
+        },
+        {
+            "True_Label": "BENIGN",
+            "Predicted_Label": "DoS attacks-Slowloris",
+            "Misclassified_Count": 5,
+            "Class_Error_Rate": 6.528199209304512e-06
+        },
+        {
+            "True_Label": "SQL Injection",
+            "Predicted_Label": "Brute Force -Web",
+            "Misclassified_Count": 3,
+            "Class_Error_Rate": 0.23076923076923078
+        },
+        {
+            "True_Label": "DoS attacks-GoldenEye",
+            "Predicted_Label": "DoS attacks-Hulk",
+            "Misclassified_Count": 3,
+            "Class_Error_Rate": 0.0004830140074062148
+        }
+    ],
+    "next_stage": "STEP 20B - evidence-based Random Forest hyperparameter optimization design"
+}

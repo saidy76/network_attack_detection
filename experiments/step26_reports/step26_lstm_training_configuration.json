@@ -1,0 +1,23 @@
+{
+    "experiment": "Step26_LSTM_Model_Training",
+    "dataset": "CIC-IDS2018",
+    "training_representation": "B1_undersampled",
+    "sequence_length": 10,
+    "feature_count": 30,
+    "class_count": 14,
+    "lstm_units_1": 64,
+    "lstm_units_2": 32,
+    "dropout_rate": 0.3,
+    "learning_rate": 0.001,
+    "batch_size": 512,
+    "maximum_epochs": 30,
+    "early_stopping_patience": 5,
+    "random_state": 42,
+    "optimizer": "Adam",
+    "loss": "sparse_categorical_crossentropy",
+    "primary_metric": "Macro_F1",
+    "validation_used_for_training_monitoring": true,
+    "test_set_used": false,
+    "training_time_seconds": 1502.5758385658264,
+    "epochs_completed": 19
+}

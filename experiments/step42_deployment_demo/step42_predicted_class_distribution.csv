@@ -1,0 +1,10 @@
+predicted_class,count,percentage
+BENIGN,831,83.1
+Infiltration,49,4.9
+DDOS attack-HOIC,36,3.5999999999999996
+DoS attacks-Hulk,33,3.3000000000000003
+Bot,20,2.0
+SSH-Bruteforce,20,2.0
+DoS attacks-GoldenEye,6,0.6
+DoS attacks-Slowloris,4,0.4
+DDOS attack-LOIC-UDP,1,0.1

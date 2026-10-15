@@ -1,0 +1,38 @@
+{
+  "model_type": "RandomForestClassifier",
+  "model_path": "D:\\network_attack_detection\\experiments\\step21_rf_tuning\\step21_best_random_forest.joblib",
+  "n_features_in": 30,
+  "n_classes": 14,
+  "classes_exposed_by_model": [
+    "BENIGN",
+    "Bot",
+    "Brute Force -Web",
+    "Brute Force -XSS",
+    "DDOS attack-HOIC",
+    "DDOS attack-LOIC-UDP",
+    "DoS attacks-GoldenEye",
+    "DoS attacks-Hulk",
+    "DoS attacks-SlowHTTPTest",
+    "DoS attacks-Slowloris",
+    "FTP-BruteForce",
+    "Infiltration",
+    "SQL Injection",
+    "SSH-Bruteforce"
+  ],
+  "fixed_project_class_mapping": {
+    "0": "BENIGN",
+    "1": "Bot",
+    "2": "Brute Force -Web",
+    "3": "Brute Force -XSS",
+    "4": "DDOS attack-HOIC",
+    "5": "DDOS attack-LOIC-UDP",
+    "6": "DoS attacks-GoldenEye",
+    "7": "DoS attacks-Hulk",
+    "8": "DoS attacks-SlowHTTPTest",
+    "9": "DoS attacks-Slowloris",
+    "10": "FTP-BruteForce",
+    "11": "Infiltration",
+    "12": "SQL Injection",
+    "13": "SSH-Bruteforce"
+  }
+}

@@ -1,0 +1,2 @@
+dataset,model,feature_count,test_samples,num_classes,accuracy,balanced_accuracy,precision_macro,recall_macro,f1_macro,f1_weighted,training_time_seconds,prediction_time_seconds
+CICIoT2023,XGBoost_Baseline,30,205637,34,0.7616819930265468,0.6377527712334262,0.705388641126665,0.6377527712334262,0.6474739513808315,0.7546703647156843,1361.242788553238,42.97955131530762

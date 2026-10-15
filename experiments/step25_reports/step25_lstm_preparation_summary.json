@@ -1,0 +1,38 @@
+{
+    "experiment": "Step25_LSTM_Sequence_Model_Preparation",
+    "dataset": "CIC-IDS2018",
+    "training_representation": "B1_undersampled",
+    "training_file": "D:\\network_attack_detection\\data\\modeling\\balanced\\CICIDS2018_train_B1_undersampled.csv",
+    "validation_file": "D:\\network_attack_detection\\data\\modeling\\CICIDS2018_validation_selected.csv",
+    "feature_count": 30,
+    "class_count": 14,
+    "sequence_length": 10,
+    "sequence_stride": 1,
+    "training_samples": 1044091,
+    "validation_samples": 882499,
+    "training_sequences": 1044082,
+    "validation_sequences": 882490,
+    "input_shape": [
+        10,
+        30
+    ],
+    "scaling": "StandardScaler fitted on training data only",
+    "validation_used_for_scaler_fitting": false,
+    "test_set_used": false,
+    "class_labels": [
+        "BENIGN",
+        "Bot",
+        "Brute Force -Web",
+        "Brute Force -XSS",
+        "DDOS attack-HOIC",
+        "DDOS attack-LOIC-UDP",
+        "DoS attacks-GoldenEye",
+        "DoS attacks-Hulk",
+        "DoS attacks-SlowHTTPTest",
+        "DoS attacks-Slowloris",
+        "FTP-BruteForce",
+        "Infiltration",
+        "SQL Injection",
+        "SSH-Bruteforce"
+    ]
+}

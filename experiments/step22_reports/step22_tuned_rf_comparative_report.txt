@@ -1,0 +1,50 @@
+STEP 22 - TUNED RANDOM FOREST COMPARATIVE EVALUATION
+==============================================================================
+
+Project: Behaviour Based Network Attack Detection System using Machine Learning
+Dataset: CIC-IDS2018
+Task: 14-class multiclass classification
+Evaluation basis: fixed validation set
+Test data: untouched
+
+OVERALL COMPARISON
+------------------------------------------------------------------------------
+Accuracy | B1=0.929499 | TunedRF=0.952812 | Change=+0.023313 | +2.331 pp
+Balanced_Accuracy | B1=0.779587 | TunedRF=0.790996 | Change=+0.011409 | +1.141 pp
+Macro_Precision | B1=0.752717 | TunedRF=0.799326 | Change=+0.046609 | +4.661 pp
+Macro_Recall | B1=0.779587 | TunedRF=0.790996 | Change=+0.011409 | +1.141 pp
+Macro_F1 | B1=0.760217 | TunedRF=0.790499 | Change=+0.030282 | +3.028 pp
+Weighted_F1 | B1=0.945773 | TunedRF=0.959964 | Change=+0.014191 | +1.419 pp
+
+PRIMARY METRIC ASSESSMENT
+------------------------------------------------------------------------------
+B1 baseline Macro F1: 0.760217
+Step 21 tuned RF Macro F1: 0.790499
+Absolute improvement: +0.030282
+Percentage-point improvement: +3.028 pp
+
+DIFFICULT CLASS FINDINGS
+------------------------------------------------------------------------------
+DoS attacks-SlowHTTPTest | F1=0.210526 | F1 change=+0.210526
+SQL Injection | F1=0.846154 | F1 change=+0.153846
+Brute Force -Web | F1=0.774648 | F1 change=+0.093329
+Infiltration | F1=0.328424 | F1 change=+0.080006
+FTP-BruteForce | F1=0.000000 | F1 change=-0.125000
+
+BENIGN / INFILTRATION CONFUSION
+------------------------------------------------------------------------------
+BENIGN -> Infiltration | count=30550 | error_rate=0.039887
+Infiltration -> BENIGN | count=10944 | error_rate=0.518894
+
+METHODOLOGICAL STATUS
+------------------------------------------------------------------------------
+No model was retrained in Step 22.
+No test data was loaded or evaluated.
+No feature selection was performed.
+No balancing was performed.
+No hyperparameter tuning was performed.
+Only existing Step 20/21 artifacts were analyzed.
+
+NEXT STAGE
+------------------------------------------------------------------------------
+STEP 23 - Controlled XGBoost improvement and evaluation.

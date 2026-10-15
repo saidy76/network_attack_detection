@@ -1,0 +1,3 @@
+True_Label,Predicted_Label,Misclassified_Count,True_Class_Support,Error_Rate
+BENIGN,Infiltration,30550,765908,0.0398872971688505
+Infiltration,BENIGN,10944,21091,0.5188943151107107

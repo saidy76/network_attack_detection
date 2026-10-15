@@ -1,0 +1,15 @@
+Experiment,Strategy,Model,Class_ID,Label,Precision,Recall,F1,Support
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,0,BENIGN,0.9850575663564288,0.9327660763433728,0.9581989299591325,765908
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,1,Bot,0.9995850048416102,0.9999077490774908,0.9997463509119837,21680
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,2,Brute Force -Web,0.44155844155844154,0.8095238095238095,0.5714285714285714,84
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,3,Brute Force -XSS,0.868421052631579,0.9705882352941176,0.9166666666666666,34
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,4,DDOS attack-HOIC,1.0,1.0,1.0,29829
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,5,DDOS attack-LOIC-UDP,1.0,1.0,1.0,259
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,6,DoS attacks-GoldenEye,0.9998389175257731,0.9993559813234584,0.999597391094291,6211
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,7,DoS attacks-Hulk,0.9997704737421961,0.9999540863177226,0.999862271600404,21780
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,8,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,9
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,9,DoS attacks-Slowloris,0.9959731543624161,0.9986541049798116,0.9973118279569892,1486
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,10,FTP-BruteForce,0.125,0.125,0.125,8
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,11,Infiltration,0.16657746638771306,0.48698496989237117,0.2482416918429003,21091
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,12,SQL Injection,0.6428571428571429,0.6923076923076923,0.6666666666666666,13
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,13,SSH-Bruteforce,0.9996456916099773,1.0,0.9998228144158191,14107

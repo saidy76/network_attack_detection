@@ -1,0 +1,80 @@
+STEP 42 — DEPLOYMENT-ORIENTED IDS DEMONSTRATION
+================================================
+
+Objective
+---------
+Demonstrate operational inference using the frozen Random Forest
+selected during Step 21.
+
+Frozen model
+------------
+D:\network_attack_detection\experiments\step21_rf_tuning\step21_best_random_forest.joblib
+
+Input
+-----
+CIC-IDS2018 validation flows.
+
+Feature schema
+--------------
+30 frozen CIC-IDS2018 features.
+
+Demonstration sample
+--------------------
+1000 validation flows.
+
+Inference pipeline
+------------------
+1. Receive flow feature vector.
+2. Validate feature schema.
+3. Validate numeric values.
+4. Validate missing values.
+5. Pass feature vector to frozen Random Forest.
+6. Generate multiclass probabilities.
+7. Select predicted attack/benign class.
+8. Calculate prediction confidence.
+9. Generate security alert status.
+10. Store structured inference log.
+
+Confidence thresholds
+---------------------
+High confidence: >= 0.8
+Medium confidence: >= 0.5
+
+Observed inference performance
+------------------------------
+Demo accuracy: 0.953000
+Mean latency: 29.487302 ms
+Median latency: 28.989300 ms
+P95 latency: 31.455120 ms
+P99 latency: 35.430372 ms
+Maximum latency: 86.994800 ms
+
+Research integrity
+------------------
+- Frozen Step-21 model used.
+- No retraining.
+- No hyperparameter optimization.
+- No model selection.
+- No test-set access.
+- No feature schema modification.
+- Validation data used only for deployment simulation.
+
+Deployment interpretation
+-------------------------
+The result demonstrates that the selected Random Forest can
+operate as a low-latency multiclass inference component when
+provided with pre-extracted network-flow features.
+
+The demonstration does NOT yet constitute a complete live IDS
+sensor because packet capture and online flow extraction are not
+implemented in this step.
+
+Next deployment-oriented work should integrate:
+- live/network flow acquisition,
+- online feature extraction,
+- prediction service,
+- alert generation,
+- and monitoring.
+
+This step therefore establishes the ML inference layer required
+for a real-world IDS prototype.

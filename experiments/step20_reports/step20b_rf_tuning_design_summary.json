@@ -1,0 +1,21 @@
+{
+    "step": "20B",
+    "status": "completed",
+    "model": "RandomForestClassifier",
+    "dataset": "CIC-IDS2018",
+    "baseline": "B1_undersampled_RandomForest",
+    "main_problem": "Severe difficult-class performance, especially Infiltration and rare attack classes.",
+    "dominant_confusion": "BENIGN <-> Infiltration",
+    "primary_metric": "Macro F1",
+    "secondary_metrics": [
+        "Balanced Accuracy",
+        "Macro Recall",
+        "Macro Precision",
+        "Weighted F1"
+    ],
+    "test_set_used": false,
+    "model_trained": false,
+    "tuning_executed": false,
+    "random_state": 42,
+    "next_step": "Execute controlled Random Forest hyperparameter optimization using the predefined search space."
+}

@@ -1,0 +1,52 @@
+
+STEP 25 - LSTM SEQUENCE MODEL PREPARATION
+
+Dataset:
+CIC-IDS2018
+
+Training representation:
+B1 undersampled
+
+Training samples:
+1044091
+
+Validation samples:
+882499
+
+Feature count:
+30
+
+Class count:
+14
+
+Sequence length:
+10
+
+Sequence stride:
+1
+
+Training sequence shape:
+(1044082, 10, 30)
+
+Validation sequence shape:
+(882490, 10, 30)
+
+Scaling:
+StandardScaler
+
+Scaler fitting:
+Training data only
+
+Validation data:
+Transformed using the training-fitted scaler
+
+Test data:
+Not used
+
+Purpose:
+Prepare the existing 30-feature CIC-IDS2018 representation
+for a sequence-based LSTM model without changing the
+established dataset split or feature-selection pipeline.
+
+No hyperparameter optimization was performed in Step 25.
+No test data was used.

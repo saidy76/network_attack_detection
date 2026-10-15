@@ -1,0 +1,15 @@
+Experiment,Strategy,Model,Class_ID,Label,Precision,Recall,F1,Support
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,0,BENIGN,0.9847143995660239,0.9598711594604051,0.9721340859098191,765908
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,1,Bot,0.9995389367882337,0.9999538745387454,0.999746362609237,21680
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,2,Brute Force -Web,0.4891304347826087,0.5357142857142857,0.5113636363636364,84
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,3,Brute Force -XSS,0.6341463414634146,0.7647058823529411,0.6933333333333334,34
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,4,DDOS attack-HOIC,1.0,1.0,1.0,29829
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,5,DDOS attack-LOIC-UDP,0.9923371647509579,1.0,0.9961538461538462,259
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,6,DoS attacks-GoldenEye,0.9998389434691577,0.9995169859925938,0.9996779388083736,6211
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,7,DoS attacks-Hulk,0.9998622779231511,1.0,0.9999311342194064,21780
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,8,DoS attacks-SlowHTTPTest,0.1111111111111111,0.1111111111111111,0.1111111111111111,9
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,9,DoS attacks-Slowloris,1.0,0.9986541049798116,0.9993265993265993,1486
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,10,FTP-BruteForce,0.0,0.0,0.0,8
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,11,Infiltration,0.24060224852657125,0.46067042814470627,0.3161062580319815,21091
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,12,SQL Injection,0.5294117647058824,0.6923076923076923,0.6,13
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,13,SSH-Bruteforce,0.9996456916099773,1.0,0.9998228144158191,14107

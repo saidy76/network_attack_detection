@@ -1,0 +1,79 @@
+STEP 41 — SHAP EXPLAINABILITY PROTOCOL
+======================================
+
+Objective
+---------
+Provide rigorous post-hoc explainability for the final frozen
+Random Forest selected during Step 21.
+
+Frozen model
+------------
+D:\network_attack_detection\experiments\step21_rf_tuning\step21_best_random_forest.joblib
+
+Validation dataset
+------------------
+D:\network_attack_detection\data\modeling\CICIDS2018_validation_selected.csv
+
+Model characteristics
+---------------------
+Model type: RandomForestClassifier
+Number of features: 30
+Number of classes: 14
+Number of trees: 150
+
+SHAP configuration
+------------------
+Explainer: TreeExplainer
+SHAP version: 0.52.0
+Validation SHAP sample: 5000
+Random state: 42
+
+Research integrity
+------------------
+1. The Step 21 Random Forest was loaded without retraining.
+2. The CIC-IDS2018 validation set was used for explanation.
+3. The untouched CIC-IDS2018 test set was not accessed.
+4. No hyperparameter optimization was performed.
+5. No feature selection was changed.
+6. No class balancing was performed.
+7. No model selection decision was based on SHAP.
+8. SHAP was used only for interpretation.
+
+Global explanation
+------------------
+Global feature importance is based on mean absolute SHAP
+magnitude across validation samples and all 14 output classes.
+
+Class-specific explanation
+--------------------------
+For every attack class, feature importance was calculated
+independently from the SHAP values associated with that class.
+
+Local explanation
+-----------------
+High-confidence correctly classified validation observations
+were selected to demonstrate sample-level model reasoning.
+
+Important limitation
+--------------------
+SHAP explains the behavior of the trained Random Forest; it does
+not establish causal relationships between network features and
+attacks. Feature attribution should therefore be interpreted as
+model behavior evidence rather than causal security evidence.
+
+Top global feature
+------------------
+Init Fwd Win Byts
+
+Top 10 global features
+----------------------
+1. Init Fwd Win Byts
+2. Dst Port
+3. Fwd Seg Size Min
+4. RST Flag Cnt
+5. Flow Duration
+6. Fwd Header Len
+7. Bwd Pkt Len Std
+8. Fwd Act Data Pkts
+9. Bwd Pkt Len Mean
+10. Fwd IAT Tot

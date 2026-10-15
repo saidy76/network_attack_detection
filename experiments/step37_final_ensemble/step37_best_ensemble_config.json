@@ -1,0 +1,25 @@
+{
+    "step": 37,
+    "selection_metric": "Macro F1",
+    "selected_model": "Tuned Random Forest",
+    "validation_best_configuration": {
+        "configuration_name": "RF_1.0_XGB_0.0",
+        "rf_weight": 1.0,
+        "xgb_weight": 0.0,
+        "macro_f1": 0.7904989762654928,
+        "balanced_accuracy": 0.7909960318842203,
+        "macro_precision": 0.7993259925674925,
+        "macro_recall": 0.7909960318842203,
+        "weighted_f1": 0.9599638953076722,
+        "accuracy": 0.9528124111188795
+    },
+    "rf_baseline_macro_f1": 0.7904989762654928,
+    "rf_baseline_balanced_accuracy": 0.7909960318842203,
+    "macro_f1_delta_vs_rf": 0.0,
+    "balanced_accuracy_delta_vs_rf": 0.0,
+    "ensemble_improves_rf": false,
+    "ensemble_decision": "RF remains optimal; no XGBoost fusion weight improved RF.",
+    "test_set_used": false,
+    "training_performed": false,
+    "hyperparameter_optimization_performed": false
+}

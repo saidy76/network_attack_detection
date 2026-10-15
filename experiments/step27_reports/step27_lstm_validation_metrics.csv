@@ -1,0 +1,13 @@
+Metric,Value
+Accuracy,0.9667225690942673
+Balanced Accuracy,0.7116542863726297
+Macro Precision,0.7385134552674553
+Macro Recall,0.7116542863726297
+Macro F1,0.6982536897045052
+Weighted Precision,0.9629565532622736
+Weighted Recall,0.9667225690942673
+Weighted F1,0.96469967353662
+Total Samples,882490.0
+Correct Predictions,853123.0
+Incorrect Predictions,29367.0
+Error Rate,0.033277430905732645

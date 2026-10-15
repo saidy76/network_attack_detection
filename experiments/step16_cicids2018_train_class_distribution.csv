@@ -1,0 +1,15 @@
+Label,Count,Percentage,Relative_to_Minority,Relative_to_Majority,Category
+BENIGN,3574237,86.788546,94058.87,1.0,Majority
+DDOS attack-HOIC,139203,3.380085,3663.24,0.038946,Minority
+DoS attacks-Hulk,101639,2.467968,2674.71,0.028437,Minority
+Bot,101174,2.456677,2662.47,0.028306,Minority
+Infiltration,98427,2.389975,2590.18,0.027538,Minority
+SSH-Bruteforce,65834,1.598561,1732.47,0.018419,Minority
+DoS attacks-GoldenEye,28984,0.703781,762.74,0.008109,Severe Minority
+DoS attacks-Slowloris,6936,0.168418,182.53,0.001941,Severe Minority
+DDOS attack-LOIC-UDP,1211,0.029405,31.87,0.000339,Severe Minority
+Brute Force -Web,388,0.009421,10.21,0.000109,Severe Minority
+Brute Force -XSS,160,0.003885,4.21,4.5e-05,Severe Minority
+SQL Injection,59,0.001433,1.55,1.7e-05,Severe Minority
+DoS attacks-SlowHTTPTest,38,0.000923,1.0,1.1e-05,Severe Minority
+FTP-BruteForce,38,0.000923,1.0,1.1e-05,Severe Minority

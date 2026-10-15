@@ -1,0 +1,18 @@
+{
+    "source": "D:\\network_attack_detection\\experiments\\step21_rf_tuning\\step21_best_rf_parameters.json",
+    "experiment": "Step21_Tuned_RandomForest",
+    "optimization_method": "RandomizedSearchCV",
+    "primary_metric": "f1_macro",
+    "best_cv_macro_f1": 0.8192559071794284,
+    "best_parameters": {
+        "n_estimators": 150,
+        "min_samples_split": 10,
+        "min_samples_leaf": 1,
+        "min_impurity_decrease": 1e-06,
+        "max_features": 0.5,
+        "max_depth": 20,
+        "criterion": "gini",
+        "class_weight": null,
+        "bootstrap": true
+    }
+}

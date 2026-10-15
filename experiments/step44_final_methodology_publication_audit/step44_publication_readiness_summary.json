@@ -1,0 +1,119 @@
+{
+    "step": 44,
+    "title": "Final Methodology & Publication-Readiness Audit",
+    "generated_at": "2026-08-30T23:17:00.837078",
+    "readiness_status": "RESEARCH PIPELINE READY FOR FINAL PAPER STAGE",
+    "project_scope": {
+        "primary_dataset": "CIC-IDS2018",
+        "primary_model": "Random Forest",
+        "multiclass": true,
+        "feature_count": 30,
+        "class_count": 14
+    },
+    "frozen_model": {
+        "path": "D:\\network_attack_detection\\experiments\\step21_rf_tuning\\step21_best_random_forest.joblib",
+        "sha256": "3fe363e4dfa6c4f137d5ea7e17e90c40cd202faf483b91e7555e47bc46ba6eb3",
+        "model_type": "RandomForestClassifier",
+        "n_features_in": 30,
+        "n_classes": 14
+    },
+    "research_integrity": {
+        "training_after_step21": false,
+        "hyperparameter_optimization_after_step21": false,
+        "test_set_used_for_model_selection": false,
+        "unsw_used_for_model_selection": false,
+        "unsupported_cross_dataset_prediction": false,
+        "frozen_model_modified": false,
+        "artificial_feature_semantic_mapping": false,
+        "temporal_claim_without_timestamp_validation": false
+    },
+    "final_model_claims": {
+        "primary_model": "Random Forest",
+        "source_step": 21,
+        "features": 30,
+        "classes": 14,
+        "macro_f1_validation": 0.790499,
+        "balanced_accuracy_validation": 0.790996,
+        "accuracy_validation": 0.952812
+    },
+    "claim_checks": {
+        "Random Forest is strongest evaluated tabular model": true,
+        "LSTM remains comparative model": true,
+        "LightGBM is non-competitive": true,
+        "SHAP explainability available": true,
+        "Final test evaluation exists": true,
+        "UNSW score intentionally not fabricated": true
+    },
+    "methodology_checks": {
+        "Step 21 — controlled RF tuning": {
+            "status": "PASS",
+            "purpose": "Controlled hyperparameter optimization using training data and stratified CV."
+        },
+        "Step 27 — LSTM comparison": {
+            "status": "PASS WITH LIMITATION",
+            "purpose": "Comparative deep-learning experiment retained, without claiming validated temporal semantics."
+        },
+        "Step 30 — timestamp recovery": {
+            "status": "PASS",
+            "purpose": "Raw timestamp recovery attempt documented; recovery was insufficient for temporal reconstruction."
+        },
+        "Step 35 — LightGBM": {
+            "status": "PASS",
+            "purpose": "Alternative tabular learner evaluated and shown to be non-competitive."
+        },
+        "Step 36 — heterogeneous comparison": {
+            "status": "PASS",
+            "purpose": "Alternative models compared before final research model consolidation."
+        },
+        "Step 39 — untouched test evaluation": {
+            "status": "PASS",
+            "purpose": "Held-out CIC-IDS2018 test set reserved for final unbiased performance reporting."
+        },
+        "Step 40 — UNSW external validation": {
+            "status": "PASS",
+            "purpose": "External generalization dataset audited without unsupported feature transformation."
+        },
+        "Step 41 — SHAP": {
+            "status": "PASS",
+            "purpose": "Global and class-specific explainability generated from the frozen Random Forest."
+        },
+        "Step 42 — deployment demonstration": {
+            "status": "PASS",
+            "purpose": "Deployment-oriented inference feasibility demonstrated without replacing formal test evaluation."
+        },
+        "Step 43 — results consolidation": {
+            "status": "PASS",
+            "purpose": "Completed experimental evidence consolidated without retraining."
+        }
+    },
+    "publication_checklist": {
+        "Clear research objective": true,
+        "Multiclass IDS formulation": true,
+        "Primary dataset documented": true,
+        "Training/validation/test separation documented": true,
+        "Class imbalance documented": true,
+        "Training-only balancing documented": true,
+        "Controlled hyperparameter optimization documented": true,
+        "Multiple model families evaluated": true,
+        "Macro-level metrics reported": true,
+        "Balanced Accuracy reported": true,
+        "Untouched test set preserved": true,
+        "Explainability analysis completed": true,
+        "External dataset compatibility audited": true,
+        "Temporal limitation explicitly documented": true,
+        "Deployment feasibility demonstrated": true,
+        "No fabricated external performance": true,
+        "No unsupported temporal claim": true
+    },
+    "critical_issues": [],
+    "warnings": [
+        "LSTM temporal interpretation must remain limited because Step-30 timestamp recovery was insufficient.",
+        "Step-42 deployment-demo accuracy must not be presented as the formal final test-set performance.",
+        "UNSW-NB15 should be described as an external compatibility/generalization audit, not as a successful numerical external validation result.",
+        "Step-39 contains 4 JSON artifacts. The authoritative final test-result artifact should be identified explicitly before paper writing."
+    ],
+    "step39_test_artifact_count": 4,
+    "external_validation_policy": "UNSW-NB15 retained as external/generalization dataset; no unsupported cross-dataset prediction.",
+    "temporal_model_policy": "LSTM retained for comparative evaluation only; no validated temporal interpretation.",
+    "deployment_policy": "Deployment demonstration is supporting evidence and not a replacement for formal held-out testing."
+}

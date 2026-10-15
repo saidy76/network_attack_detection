@@ -1,0 +1,15 @@
+class,predicted_count,true_count,correct_count
+BENIGN,831,860,822
+Bot,20,20,20
+Brute Force -Web,0,0,0
+Brute Force -XSS,0,0,0
+DDOS attack-HOIC,36,36,36
+DDOS attack-LOIC-UDP,1,1,1
+DoS attacks-GoldenEye,6,6,6
+DoS attacks-Hulk,33,33,33
+DoS attacks-SlowHTTPTest,0,0,0
+DoS attacks-Slowloris,4,4,4
+FTP-BruteForce,0,0,0
+Infiltration,49,20,11
+SQL Injection,0,0,0
+SSH-Bruteforce,20,20,20

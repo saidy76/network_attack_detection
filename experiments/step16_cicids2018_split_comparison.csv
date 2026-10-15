@@ -1,0 +1,15 @@
+Label,Train,Validation,Test
+BENIGN,3574237,765908,765909
+DDOS attack-HOIC,139203,29829,29829
+DoS attacks-Hulk,101639,21780,21780
+Bot,101174,21680,21681
+Infiltration,98427,21091,21092
+SSH-Bruteforce,65834,14107,14107
+DoS attacks-GoldenEye,28984,6211,6211
+DoS attacks-Slowloris,6936,1486,1486
+DDOS attack-LOIC-UDP,1211,259,260
+Brute Force -Web,388,84,83
+Brute Force -XSS,160,34,34
+SQL Injection,59,13,12
+DoS attacks-SlowHTTPTest,38,9,8
+FTP-BruteForce,38,8,8

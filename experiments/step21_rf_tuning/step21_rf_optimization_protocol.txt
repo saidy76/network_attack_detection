@@ -1,0 +1,197 @@
+STEP 21 - CONTROLLED RANDOM FOREST HYPERPARAMETER OPTIMIZATION
+
+================================================================
+
+Research Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Dataset:
+CIC-IDS2018
+
+Training representation:
+B1 undersampled training configuration
+
+Training file:
+D:\network_attack_detection\data\modeling\balanced\CICIDS2018_train_B1_undersampled.csv
+
+Validation file:
+D:\network_attack_detection\data\modeling\CICIDS2018_validation_selected.csv
+
+Selected feature count:
+30
+
+Optimization method:
+RandomizedSearchCV
+
+Primary optimization metric:
+Macro F1
+
+Cross-validation:
+Stratified 3-fold cross-validation
+
+Randomized configurations:
+12
+
+Random state:
+42
+
+Search parallelism:
+RandomizedSearchCV n_jobs=1
+
+Random Forest parallelism:
+RandomForestClassifier n_jobs=-1
+
+
+IMPORTANT VALIDATION POLICY
+---------------------------
+
+The validation dataset was NOT used during hyperparameter optimization.
+
+The validation dataset was evaluated only after the best configuration
+was selected using cross-validation on the B1 training dataset.
+
+
+TEST-SET POLICY
+---------------
+
+The held-out CIC-IDS2018 test set was NOT loaded or evaluated.
+
+
+SEARCH SPACE
+------------
+
+{
+    "n_estimators": [
+        100,
+        150,
+        200
+    ],
+    "max_depth": [
+        null,
+        20,
+        30
+    ],
+    "min_samples_split": [
+        2,
+        5,
+        10
+    ],
+    "min_samples_leaf": [
+        1,
+        2,
+        5
+    ],
+    "max_features": [
+        "sqrt",
+        "log2",
+        0.5
+    ],
+    "criterion": [
+        "gini",
+        "entropy"
+    ],
+    "class_weight": [
+        null,
+        "balanced",
+        "balanced_subsample"
+    ],
+    "bootstrap": [
+        true
+    ],
+    "min_impurity_decrease": [
+        0.0,
+        1e-07,
+        1e-06
+    ]
+}
+
+
+STEP 20A MOTIVATION
+-------------------
+
+Step 20A identified substantial class-level weaknesses, especially:
+
+- Infiltration
+- FTP-BruteForce
+- DoS attacks-SlowHTTPTest
+- SQL Injection
+- Brute Force -Web
+
+The dominant error pattern was:
+
+BENIGN <-> Infiltration
+
+Therefore Macro F1 was selected as the primary optimization objective
+rather than Accuracy.
+
+
+COMPUTATIONAL CONTROL
+---------------------
+
+The previous configuration required:
+
+30 configurations x 3 folds = 90 model fits.
+
+Because the B1 training dataset contains more than one million samples,
+that configuration was computationally excessive for the available system.
+
+This controlled experiment therefore uses:
+
+12 configurations x 3 folds = 36 model fits.
+
+The research protocol, dataset representation, feature representation,
+validation isolation, and primary metric remain unchanged.
+
+
+VALIDATION RESULTS
+------------------
+
+Best CV Macro F1:
+0.819256
+
+Validation Accuracy:
+0.952812
+
+Validation Balanced Accuracy:
+0.790996
+
+Validation Macro Precision:
+0.799326
+
+Validation Macro Recall:
+0.790996
+
+Validation Macro F1:
+0.790499
+
+Validation Weighted F1:
+0.959964
+
+
+RESEARCH INTEGRITY
+------------------
+
+No additional preprocessing was introduced.
+
+No new train/validation split was created.
+
+No test-set information influenced hyperparameter selection.
+
+No manual class-specific threshold manipulation was performed.
+
+The optimized Random Forest is a validation-stage candidate only.
+
+It must NOT yet be reported as the final held-out test result.
+
+UNSW-NB15 remains reserved for external validation.
+
+CICIoT2023 remains the primary IoT dataset in the overall
+research architecture.
+
+
+NEXT EXPERIMENT
+---------------
+
+Step 22 should compare the tuned Random Forest against the
+Step 18/20 baseline and determine whether the observed improvement
+is meaningful, especially for difficult classes.

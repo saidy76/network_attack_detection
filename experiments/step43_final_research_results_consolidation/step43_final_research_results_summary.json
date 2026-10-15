@@ -1,0 +1,124 @@
+{
+    "step": 43,
+    "title": "Final Research Results Consolidation & Comparative Analysis",
+    "generated_at": "2026-08-30T23:11:44.277534",
+    "research_integrity": {
+        "retraining_performed": false,
+        "hyperparameter_optimization_performed": false,
+        "test_set_used_for_model_selection": false,
+        "unsw_used_for_model_selection": false,
+        "frozen_model_modified": false,
+        "new_predictions_generated": false
+    },
+    "primary_model": {
+        "name": "Random Forest",
+        "source": "Step 21 tuned Random Forest",
+        "model_path": "D:\\network_attack_detection\\experiments\\step21_rf_tuning\\step21_best_random_forest.joblib",
+        "n_features": 30,
+        "n_classes": 14
+    },
+    "model_comparison": [
+        {
+            "model": "Random Forest",
+            "experiment_step": 21,
+            "validation_accuracy": 0.9528124111188795,
+            "balanced_accuracy": 0.7909960318842203,
+            "macro_precision": 0.7993259925674925,
+            "macro_recall": 0.7909960318842203,
+            "macro_f1": 0.7904989762654928,
+            "weighted_f1": 0.9599638953076722,
+            "status": "Frozen candidate model"
+        },
+        {
+            "model": "LSTM",
+            "experiment_step": 27,
+            "validation_accuracy": 0.9667225690942673,
+            "balanced_accuracy": 0.7116542863726297,
+            "macro_precision": 0.7385134552674553,
+            "macro_recall": 0.7116542863726297,
+            "macro_f1": 0.6982536897045052,
+            "weighted_f1": 0.96469967353662,
+            "status": "Experimental sequence model; temporal interpretation not retained because timestamp recovery was insufficient"
+        },
+        {
+            "model": "LightGBM",
+            "experiment_step": 35,
+            "validation_accuracy": 0.684145817728972,
+            "balanced_accuracy": 0.3615396999566685,
+            "macro_precision": 0.2648070226020702,
+            "macro_recall": 0.3615396999566685,
+            "macro_f1": 0.2887118687326454,
+            "weighted_f1": 0.7605863775175131,
+            "status": "Non-competitive tabular baseline"
+        }
+    ],
+    "heterogeneous_comparison": {
+        "experiment": "Heterogeneous Model Comparison",
+        "experiment_step": 36,
+        "status": "Completed"
+    },
+    "final_test_evaluation": {
+        "experiment": "CIC-IDS2018 Untouched Test Evaluation",
+        "experiment_step": 39,
+        "model": "Frozen Step-21 Random Forest",
+        "test_accuracy": 0.9525507082152974,
+        "balanced_accuracy": 0.8255625180926088,
+        "macro_precision": 0.8276492182158928,
+        "macro_recall": 0.8255625180926088,
+        "macro_f1": 0.8230109293511854,
+        "weighted_f1": 0.9597619543174821,
+        "status": "Final untouched-test evidence"
+    },
+    "external_validation": {
+        "experiment": "UNSW-NB15 External Validation",
+        "experiment_step": 40,
+        "prediction_performed": false,
+        "decision": "INCOMPATIBLE — external prediction NOT performed.",
+        "status": "The frozen CIC-IDS2018 model cannot be directly evaluated on UNSW-NB15 without an unsupported feature transformation or retraining. Therefore external accuracy/F1 is intentionally not fabricated."
+    },
+    "explainability": {
+        "experiment": "SHAP Explainability",
+        "experiment_step": 41,
+        "sample_size": 5000.0,
+        "features_explained": 30,
+        "classes_explained": 14,
+        "status": "Completed"
+    },
+    "deployment_demonstration": {
+        "experiment": "Deployment-Oriented Demonstration",
+        "experiment_step": 42,
+        "flows_simulated": null,
+        "accuracy": null,
+        "mean_latency_ms": null,
+        "median_latency_ms": null,
+        "p95_latency_ms": null,
+        "attack_alerts": null,
+        "status": "Completed"
+    },
+    "research_conclusions": {
+        "final_model": "The tuned Random Forest is retained as the primary final model because it provides substantially stronger balanced and macro-level performance than the evaluated LSTM and LightGBM alternatives, while also supporting explainability through SHAP and a deployment-oriented inference demonstration.",
+        "temporal_model": "The LSTM experiment is retained as a comparative deep-learning experiment, but its sequences are not treated as validated temporal sequences because Step 30 recovered timestamps for only 4.24% of the B1 rows and chronological reconstruction was not reliable.",
+        "external_validation": "UNSW-NB15 is retained as an external/generalization dataset, but no cross-dataset performance score is reported because its feature schema and attack taxonomy are incompatible with the frozen CIC-IDS2018 model.",
+        "test_evaluation": "The final model evaluation must rely on the untouched CIC-IDS2018 test set from Step 39 and must not be replaced by validation or deployment-demo results."
+    },
+    "completed_experiment_steps": [
+        21,
+        27,
+        35,
+        36,
+        39,
+        40,
+        41,
+        42
+    ],
+    "paper_ready_evidence": [
+        "Controlled Random Forest hyperparameter optimization",
+        "Multiclass validation performance",
+        "Deep-learning comparative experiment",
+        "Heterogeneous model comparison",
+        "Untouched CIC-IDS2018 test evaluation",
+        "External dataset compatibility audit",
+        "SHAP global and class-specific explainability",
+        "Deployment-oriented inference demonstration"
+    ]
+}

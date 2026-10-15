@@ -1,0 +1,181 @@
+STEP 39 — FINAL UNTOUCHED TEST EVALUATION
+============================================================
+
+Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Primary dataset:
+CIC-IDS2018
+
+Final frozen candidate:
+Tuned Random Forest
+
+Model:
+D:\network_attack_detection\experiments\step21_rf_tuning\step21_best_random_forest.joblib
+
+Test dataset:
+D:\network_attack_detection\data\modeling\CICIDS2018_test_selected.csv
+
+Output directory:
+D:\network_attack_detection\experiments\step39_final_untouched_test_evaluation
+
+RESEARCH-INTEGRITY STATUS
+------------------------------------------------------------
+Test set used:
+YES — this is the first final untouched-test evaluation.
+
+Training performed:
+NO
+
+Hyperparameter optimization:
+NO
+
+Model selection using test data:
+NO
+
+Validation tuning after test evaluation:
+NO
+
+Final candidate frozen before test:
+YES
+
+Test data was not used in:
+- RF hyperparameter optimization
+- XGBoost hyperparameter optimization
+- Step 37 ensemble weight evaluation
+- Step 38 ensemble validation/error analysis
+
+The final candidate was frozen after Step 38:
+Tuned Random Forest
+
+Step 37 conclusion:
+RF + XGBoost probability fusion did not improve RF.
+
+Therefore the frozen final candidate entering Step 39 was:
+Tuned Random Forest
+
+EVALUATION
+------------------------------------------------------------
+Test samples:
+882500
+
+Features:
+30
+
+Classes:
+14
+
+Primary metric:
+Macro F1
+
+Secondary primary metric:
+Balanced Accuracy
+
+Additional metrics:
+- Macro Precision
+- Macro Recall
+- Weighted F1
+- Accuracy
+- ROC-AUC OvR Macro
+- ROC-AUC OvR Weighted
+- PR-AUC / Average Precision Macro
+- PR-AUC / Average Precision Weighted
+- Per-class Precision
+- Per-class Recall
+- Per-class F1
+- Per-class FPR
+- Per-class FNR
+- Confusion Matrix
+
+FINAL TEST RESULTS
+------------------------------------------------------------
+Accuracy:
+0.952551
+
+Balanced Accuracy:
+0.825563
+
+Macro Precision:
+0.827649
+
+Macro Recall:
+0.825563
+
+Macro F1:
+0.823011
+
+Weighted F1:
+0.959762
+
+ROC-AUC OvR Macro:
+0.993721
+
+ROC-AUC OvR Weighted:
+0.985339
+
+PR-AUC / AP Macro:
+0.846970
+
+PR-AUC / AP Weighted:
+0.980732
+
+INFILTRATION
+------------------------------------------------------------
+Support:
+21092
+
+Precision:
+0.246719
+
+Recall:
+0.476863
+
+F1:
+0.325191
+
+FPR:
+0.035650
+
+FNR:
+0.523137
+
+BENIGN -> Infiltration:
+30708
+
+Infiltration -> BENIGN:
+11032
+
+VALIDATION VS TEST
+------------------------------------------------------------
+The validation-vs-test comparison is descriptive only.
+
+The untouched test result must not be used to retune or reselect
+the final model.
+
+Any observed validation-test performance gap should be interpreted
+as an estimate of generalization behaviour on the primary dataset.
+
+SCIENTIFIC INTERPRETATION RULE
+------------------------------------------------------------
+Low-support classes must be interpreted cautiously.
+
+Substantial-support difficult classes, especially Infiltration,
+should receive greater scientific attention.
+
+The final test result is an unbiased primary-dataset estimate only
+under the stated train/validation/test separation.
+
+No claim of universal generalization or zero-day detection is made
+from this test evaluation alone.
+
+Runtime:
+24.21 seconds
+
+TEST SET STATUS:
+USED — FINAL EVALUATION ONLY
+
+TRAINING PERFORMED:
+NO
+
+HYPERPARAMETER OPTIMIZATION:
+NO

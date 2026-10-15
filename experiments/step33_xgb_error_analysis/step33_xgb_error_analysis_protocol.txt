@@ -1,0 +1,66 @@
+STEP 33 - XGBOOST DIFFICULT-CLASS & ERROR ANALYSIS
+
+Research Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Dataset:
+CIC-IDS2018
+
+Model:
+Previously trained Step 23 XGBoost classifier
+
+Evaluation dataset:
+CICIDS2018_validation_selected.csv
+
+Training representation:
+B1 undersampled
+
+Feature count:
+30
+
+Class count:
+14
+
+Validation samples:
+882,499
+
+Primary model:
+XGBoost
+
+Overall validation metrics:
+Accuracy          = 0.952616
+Balanced Accuracy = 0.764270
+Macro Precision   = 0.726455
+Macro Recall      = 0.764270
+Macro F1          = 0.741865
+Weighted F1       = 0.959599
+
+Total classification errors:
+41,816
+
+Infiltration:
+Support    = 21,091
+Precision  = 0.241892
+Recall     = 0.457257
+F1         = 0.316404
+
+Rare class threshold:
+Support <= 100
+
+Rare class count:
+5
+
+Top error concentration:
+Top 20 confusion errors = 41,809
+Concentration = 0.999833
+
+Methodological controls:
+- No additional training performed.
+- No hyperparameter optimization performed.
+- No validation-based model tuning performed.
+- No test-set data used.
+- Analysis performed on the completed Step 23 XGBoost model.
+- The validation dataset was used only for post-training evaluation.
+
+Runtime:
+10.81 seconds

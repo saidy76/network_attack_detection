@@ -1,0 +1,15 @@
+True_Class,Model,Predicted_BENIGN,Predicted_Bot,Predicted_Brute Force -Web,Predicted_Brute Force -XSS,Predicted_DDOS attack-HOIC,Predicted_DDOS attack-LOIC-UDP,Predicted_DoS attacks-GoldenEye,Predicted_DoS attacks-Hulk,Predicted_DoS attacks-SlowHTTPTest,Predicted_DoS attacks-Slowloris,Predicted_FTP-BruteForce,Predicted_Infiltration,Predicted_SQL Injection,Predicted_SSH-Bruteforce
+BENIGN,RF_1.0_XGB_0.0,735268,2,2,1,76,0,0,3,0,5,0,30550,1,0
+Bot,RF_1.0_XGB_0.0,3,21677,0,0,0,0,0,0,0,0,0,0,0,0
+Brute Force -Web,RF_1.0_XGB_0.0,27,0,55,0,0,0,0,0,0,0,0,1,1,0
+Brute Force -XSS,RF_1.0_XGB_0.0,1,0,0,31,0,0,0,0,0,0,0,2,0,0
+DDOS attack-HOIC,RF_1.0_XGB_0.0,0,0,0,0,29829,0,0,0,0,0,0,0,0,0
+DDOS attack-LOIC-UDP,RF_1.0_XGB_0.0,0,0,0,0,0,259,0,0,0,0,0,0,0,0
+DoS attacks-GoldenEye,RF_1.0_XGB_0.0,0,0,0,0,0,0,6208,2,0,1,0,0,0,0
+DoS attacks-Hulk,RF_1.0_XGB_0.0,0,0,0,0,0,0,2,21778,0,0,0,0,0,0
+DoS attacks-SlowHTTPTest,RF_1.0_XGB_0.0,0,0,0,0,0,0,0,0,2,0,7,0,0,0
+DoS attacks-Slowloris,RF_1.0_XGB_0.0,2,0,0,0,0,0,0,0,0,1484,0,0,0,0
+FTP-BruteForce,RF_1.0_XGB_0.0,0,0,0,0,0,0,0,0,8,0,0,0,0,0
+Infiltration,RF_1.0_XGB_0.0,10944,0,0,0,0,0,0,0,0,0,0,10147,0,0
+SQL Injection,RF_1.0_XGB_0.0,0,0,1,0,0,0,0,0,0,0,0,1,11,0
+SSH-Bruteforce,RF_1.0_XGB_0.0,0,0,0,0,0,0,0,0,0,0,0,0,0,14107

@@ -1,0 +1,59 @@
+{
+    "step": 42,
+    "title": "Deployment-Oriented IDS Demonstration",
+    "purpose": "Demonstrate operational inference using the frozen Step-21 Random Forest.",
+    "model": {
+        "type": "RandomForestClassifier",
+        "model_path": "D:\\network_attack_detection\\experiments\\step21_rf_tuning\\step21_best_random_forest.joblib",
+        "n_features": 30,
+        "n_classes": 14,
+        "n_estimators": 150
+    },
+    "deployment_input": {
+        "dataset": "CIC-IDS2018 validation set",
+        "sample_size": 1000,
+        "feature_count": 30,
+        "schema_validation": true,
+        "numeric_validation": true,
+        "missing_value_validation": true
+    },
+    "inference": {
+        "accuracy_on_demo_sample": 0.953,
+        "attack_alert_count": 169,
+        "high_confidence_predictions": 868
+    },
+    "latency_ms": {
+        "mean": 29.487301899353042,
+        "median": 28.989299898967147,
+        "p95": 31.455120153259486,
+        "p99": 35.430372033733875,
+        "max": 86.99480001814663,
+        "min": 27.199599891901016
+    },
+    "thresholds": {
+        "high_confidence": 0.8,
+        "medium_confidence": 0.5
+    },
+    "research_integrity": {
+        "frozen_model": true,
+        "retraining": false,
+        "hyperparameter_optimization": false,
+        "model_selection": false,
+        "test_set_used": false,
+        "validation_data_used": true,
+        "feature_schema_changed": false
+    },
+    "deployment_capability": {
+        "batch_inference": true,
+        "single_flow_inference": true,
+        "multiclass_prediction": true,
+        "confidence_estimation": true,
+        "attack_alert_generation": true,
+        "structured_logging": true,
+        "latency_measurement": true,
+        "packet_capture": false,
+        "network_sensor_integration": false,
+        "production_service": false
+    },
+    "important_limitation": "This step demonstrates deployable model inference using pre-extracted CIC-IDS2018 flow features. It does not claim that live packet capture, flow generation, or production network integration has already been implemented."
+}

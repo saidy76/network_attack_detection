@@ -1,0 +1,31 @@
+cic_feature_index,cic_feature,exact_match_in_unsw,normalized_name
+1,Init Fwd Win Byts,False,init_fwd_win_byts
+2,Flow Duration,False,flow_duration
+3,Fwd Header Len,False,fwd_header_len
+4,Dst Port,False,dst_port
+5,Bwd Pkts/s,False,bwd_pkts/s
+6,Fwd IAT Tot,False,fwd_iat_tot
+7,TotLen Fwd Pkts,False,totlen_fwd_pkts
+8,TotLen Bwd Pkts,False,totlen_bwd_pkts
+9,Bwd Pkt Len Mean,False,bwd_pkt_len_mean
+10,Fwd Seg Size Min,False,fwd_seg_size_min
+11,Bwd Pkt Len Std,False,bwd_pkt_len_std
+12,Fwd Pkt Len Max,False,fwd_pkt_len_max
+13,Fwd IAT Min,False,fwd_iat_min
+14,Init Bwd Win Byts,False,init_bwd_win_byts
+15,Fwd Pkt Len Std,False,fwd_pkt_len_std
+16,Pkt Len Mean,False,pkt_len_mean
+17,Tot Fwd Pkts,False,tot_fwd_pkts
+18,Flow IAT Std,False,flow_iat_std
+19,Flow Byts/s,False,flow_byts/s
+20,Bwd IAT Tot,False,bwd_iat_tot
+21,Flow IAT Min,False,flow_iat_min
+22,Tot Bwd Pkts,False,tot_bwd_pkts
+23,Bwd IAT Min,False,bwd_iat_min
+24,Fwd IAT Std,False,fwd_iat_std
+25,Bwd IAT Std,False,bwd_iat_std
+26,Fwd Act Data Pkts,False,fwd_act_data_pkts
+27,RST Flag Cnt,False,rst_flag_cnt
+28,PSH Flag Cnt,False,psh_flag_cnt
+29,Idle Mean,False,idle_mean
+30,Down/Up Ratio,False,down/up_ratio

@@ -1,0 +1,7 @@
+Experiment,Model,Strategy,Minority_Mean_F1,Minority_Median_F1,Minority_Min_F1,Minority_Max_F1,Minority_Class_Count
+B0_original_RandomForest,RandomForest,B0_original,0.6498845988152679,0.7936507936507937,0.0,1.0,10
+B0_original_XGBoost,XGBoost,B0_original,0.5923510286223672,0.7567340067340067,0.0,1.0,10
+B1_undersampled_RandomForest,RandomForest,B1_undersampled,0.6685068699451742,0.8167420814479638,0.0,1.0,10
+B1_undersampled_XGBoost,XGBoost,B1_undersampled,0.62268955375447,0.6466666666666667,0.0,0.9998228144158192,10
+B2_hybrid_RandomForest,RandomForest,B2_hybrid,0.6524735630071905,0.7916666666666666,0.0,1.0,10
+B2_hybrid_XGBoost,XGBoost,B2_hybrid,0.5687331517048626,0.5353535353535354,0.0,0.9998228144158192,10

@@ -1,0 +1,15 @@
+True_Label,BENIGN,Bot,Brute Force -Web,Brute Force -XSS,DDOS attack-HOIC,DDOS attack-LOIC-UDP,DoS attacks-GoldenEye,DoS attacks-Hulk,DoS attacks-SlowHTTPTest,DoS attacks-Slowloris,FTP-BruteForce,Infiltration,SQL Injection,SSH-Bruteforce
+BENIGN,735268,2,2,1,76,0,0,3,0,5,0,30550,1,0
+Bot,3,21677,0,0,0,0,0,0,0,0,0,0,0,0
+Brute Force -Web,27,0,55,0,0,0,0,0,0,0,0,1,1,0
+Brute Force -XSS,1,0,0,31,0,0,0,0,0,0,0,2,0,0
+DDOS attack-HOIC,0,0,0,0,29829,0,0,0,0,0,0,0,0,0
+DDOS attack-LOIC-UDP,0,0,0,0,0,259,0,0,0,0,0,0,0,0
+DoS attacks-GoldenEye,0,0,0,0,0,0,6208,2,0,1,0,0,0,0
+DoS attacks-Hulk,0,0,0,0,0,0,2,21778,0,0,0,0,0,0
+DoS attacks-SlowHTTPTest,0,0,0,0,0,0,0,0,2,0,7,0,0,0
+DoS attacks-Slowloris,2,0,0,0,0,0,0,0,0,1484,0,0,0,0
+FTP-BruteForce,0,0,0,0,0,0,0,0,8,0,0,0,0,0
+Infiltration,10944,0,0,0,0,0,0,0,0,0,0,10147,0,0
+SQL Injection,0,0,1,0,0,0,0,0,0,0,0,1,11,0
+SSH-Bruteforce,0,0,0,0,0,0,0,0,0,0,0,0,0,14107

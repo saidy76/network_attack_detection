@@ -1,0 +1,10 @@
+class,sample_count,sample_percentage
+BENIGN,4345,86.9
+DDOS attack-HOIC,172,3.44
+DoS attacks-Hulk,132,2.64
+Infiltration,119,2.3800000000000003
+Bot,115,2.3
+SSH-Bruteforce,83,1.66
+DoS attacks-GoldenEye,27,0.54
+DoS attacks-Slowloris,6,0.12
+Brute Force -XSS,1,0.02

@@ -1,0 +1,85 @@
+Experiment,Strategy,Model,Class_ID,Label,Precision,Recall,F1,Support
+B0_original_RandomForest,B0_original,RandomForest,0,BENIGN,0.98934159042605,0.9019177237997253,0.943609063638897,765908
+B0_original_RandomForest,B0_original,RandomForest,1,Bot,0.9996311154147646,0.9999538745387454,0.9997924689279867,21680
+B0_original_RandomForest,B0_original,RandomForest,2,Brute Force -Web,0.4166666666666667,0.7738095238095238,0.5416666666666666,84
+B0_original_RandomForest,B0_original,RandomForest,3,Brute Force -XSS,0.8947368421052632,1.0,0.9444444444444444,34
+B0_original_RandomForest,B0_original,RandomForest,4,DDOS attack-HOIC,0.9999329556501626,1.0,0.9999664767013074,29829
+B0_original_RandomForest,B0_original,RandomForest,5,DDOS attack-LOIC-UDP,1.0,1.0,1.0,259
+B0_original_RandomForest,B0_original,RandomForest,6,DoS attacks-GoldenEye,1.0,0.9993559813234584,0.9996778869383154,6211
+B0_original_RandomForest,B0_original,RandomForest,7,DoS attacks-Hulk,0.999770484278173,1.0,0.9998852289682084,21780
+B0_original_RandomForest,B0_original,RandomForest,8,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,9
+B0_original_RandomForest,B0_original,RandomForest,9,DoS attacks-Slowloris,0.994634473507713,0.9979811574697174,0.9963050050386295,1486
+B0_original_RandomForest,B0_original,RandomForest,10,FTP-BruteForce,0.125,0.125,0.125,8
+B0_original_RandomForest,B0_original,RandomForest,11,Infiltration,0.15413415129234517,0.6480489308235741,0.24903659569816064,21091
+B0_original_RandomForest,B0_original,RandomForest,12,SQL Injection,0.6,0.6923076923076923,0.6428571428571429,13
+B0_original_RandomForest,B0_original,RandomForest,13,SSH-Bruteforce,0.9997165332010488,1.0,0.9998582465093203,14107
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,0,BENIGN,0.9850417482861629,0.9329684505188612,0.9582982136043939,765908
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,1,Bot,0.9996311154147646,0.9999538745387454,0.9997924689279867,21680
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,2,Brute Force -Web,0.6326530612244898,0.7380952380952381,0.6813186813186813,84
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,3,Brute Force -XSS,0.9411764705882353,0.9411764705882353,0.9411764705882353,34
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,4,DDOS attack-HOIC,1.0,1.0,1.0,29829
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,5,DDOS attack-LOIC-UDP,1.0,1.0,1.0,259
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,6,DoS attacks-GoldenEye,1.0,0.9993559813234584,0.9996778869383154,6211
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,7,DoS attacks-Hulk,0.999770484278173,1.0,0.9998852289682084,21780
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,8,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,9
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,9,DoS attacks-Slowloris,0.9959731543624161,0.9986541049798116,0.9973118279569892,1486
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,10,FTP-BruteForce,0.125,0.125,0.125,8
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,11,Infiltration,0.16676956069664675,0.486700488359964,0.2484178938325085,21091
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,12,SQL Injection,0.6923076923076923,0.6923076923076923,0.6923076923076923,13
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,13,SSH-Bruteforce,0.9997165332010488,1.0,0.9998582465093203,14107
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,0,BENIGN,0.9850575663564288,0.9327660763433728,0.9581989299591325,765908
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,1,Bot,0.9995850048416102,0.9999077490774908,0.9997463509119837,21680
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,2,Brute Force -Web,0.44155844155844154,0.8095238095238095,0.5714285714285714,84
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,3,Brute Force -XSS,0.868421052631579,0.9705882352941176,0.9166666666666666,34
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,4,DDOS attack-HOIC,1.0,1.0,1.0,29829
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,5,DDOS attack-LOIC-UDP,1.0,1.0,1.0,259
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,6,DoS attacks-GoldenEye,0.9998389175257731,0.9993559813234584,0.999597391094291,6211
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,7,DoS attacks-Hulk,0.9997704737421961,0.9999540863177226,0.999862271600404,21780
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,8,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,9
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,9,DoS attacks-Slowloris,0.9959731543624161,0.9986541049798116,0.9973118279569892,1486
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,10,FTP-BruteForce,0.125,0.125,0.125,8
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,11,Infiltration,0.16657746638771306,0.48698496989237117,0.2482416918429003,21091
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,12,SQL Injection,0.6428571428571429,0.6923076923076923,0.6666666666666666,13
+B2_hybrid_RandomForest,B2_hybrid,RandomForest,13,SSH-Bruteforce,0.9996456916099773,1.0,0.9998228144158191,14107
+B0_original_XGBoost,B0_original,XGBoost,0,BENIGN,0.9958144122403408,0.7790635428798237,0.8742040001259974,765908
+B0_original_XGBoost,B0_original,XGBoost,1,Bot,0.9997694152370411,0.9999538745387454,0.9998616363804077,21680
+B0_original_XGBoost,B0_original,XGBoost,2,Brute Force -Web,0.06519823788546256,0.8809523809523809,0.1214109926168991,84
+B0_original_XGBoost,B0_original,XGBoost,3,Brute Force -XSS,0.6296296296296297,1.0,0.7727272727272727,34
+B0_original_XGBoost,B0_original,XGBoost,4,DDOS attack-HOIC,1.0,1.0,1.0,29829
+B0_original_XGBoost,B0_original,XGBoost,5,DDOS attack-LOIC-UDP,1.0,1.0,1.0,259
+B0_original_XGBoost,B0_original,XGBoost,6,DoS attacks-GoldenEye,0.9998389434691577,0.9995169859925938,0.9996779388083736,6211
+B0_original_XGBoost,B0_original,XGBoost,7,DoS attacks-Hulk,0.9998622779231511,1.0,0.9999311342194064,21780
+B0_original_XGBoost,B0_original,XGBoost,8,DoS attacks-SlowHTTPTest,0.1111111111111111,0.1111111111111111,0.1111111111111111,9
+B0_original_XGBoost,B0_original,XGBoost,9,DoS attacks-Slowloris,0.9986550100874243,0.9993270524899058,0.9989909182643795,1486
+B0_original_XGBoost,B0_original,XGBoost,10,FTP-BruteForce,0.0,0.0,0.0,8
+B0_original_XGBoost,B0_original,XGBoost,11,Infiltration,0.09956619537275065,0.8814660281636717,0.1789221937241051,21091
+B0_original_XGBoost,B0_original,XGBoost,12,SQL Injection,0.7142857142857143,0.7692307692307693,0.7407407407407407,13
+B0_original_XGBoost,B0_original,XGBoost,13,SSH-Bruteforce,0.9998582465093203,1.0,0.999929118230791,14107
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,0,BENIGN,0.9847143995660239,0.9598711594604051,0.9721340859098191,765908
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,1,Bot,0.9995389367882337,0.9999538745387454,0.999746362609237,21680
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,2,Brute Force -Web,0.4891304347826087,0.5357142857142857,0.5113636363636364,84
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,3,Brute Force -XSS,0.6341463414634146,0.7647058823529411,0.6933333333333334,34
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,4,DDOS attack-HOIC,1.0,1.0,1.0,29829
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,5,DDOS attack-LOIC-UDP,0.9923371647509579,1.0,0.9961538461538462,259
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,6,DoS attacks-GoldenEye,0.9998389434691577,0.9995169859925938,0.9996779388083736,6211
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,7,DoS attacks-Hulk,0.9998622779231511,1.0,0.9999311342194064,21780
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,8,DoS attacks-SlowHTTPTest,0.1111111111111111,0.1111111111111111,0.1111111111111111,9
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,9,DoS attacks-Slowloris,1.0,0.9986541049798116,0.9993265993265993,1486
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,10,FTP-BruteForce,0.0,0.0,0.0,8
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,11,Infiltration,0.24060224852657125,0.46067042814470627,0.3161062580319815,21091
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,12,SQL Injection,0.5294117647058824,0.6923076923076923,0.6,13
+B1_undersampled_XGBoost,B1_undersampled,XGBoost,13,SSH-Bruteforce,0.9996456916099773,1.0,0.9998228144158191,14107
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,0,BENIGN,0.9848515733121628,0.9588514547439118,0.9716776175644816,765908
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,1,Bot,0.9995389367882337,0.9999538745387454,0.999746362609237,21680
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,2,Brute Force -Web,0.10674157303370786,0.9047619047619048,0.19095477386934673,84
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,3,Brute Force -XSS,0.47692307692307695,0.9117647058823529,0.6262626262626263,34
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,4,DDOS attack-HOIC,1.0,1.0,1.0,29829
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,5,DDOS attack-LOIC-UDP,0.9961538461538462,1.0,0.9980732177263969,259
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,6,DoS attacks-GoldenEye,0.9998389175257731,0.9993559813234584,0.999597391094291,6211
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,7,DoS attacks-Hulk,0.9998163789937569,1.0,0.999908181066936,21780
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,8,DoS attacks-SlowHTTPTest,0.1111111111111111,0.1111111111111111,0.1111111111111111,9
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,9,DoS attacks-Slowloris,1.0,0.9986541049798116,0.9993265993265993,1486
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,10,FTP-BruteForce,0.0,0.0,0.0,8
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,11,Infiltration,0.24131991436797165,0.46498506471954865,0.31773853879799124,21091
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,12,SQL Injection,0.42857142857142855,0.46153846153846156,0.4444444444444444,13
+B2_hybrid_XGBoost,B2_hybrid,XGBoost,13,SSH-Bruteforce,0.9996456916099773,1.0,0.9998228144158191,14107

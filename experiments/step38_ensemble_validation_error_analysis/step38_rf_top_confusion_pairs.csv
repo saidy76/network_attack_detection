@@ -1,0 +1,24 @@
+true_class_id,true_class,predicted_class_id,predicted_class,error_count,error_rank
+0,BENIGN,11,Infiltration,30550,1
+11,Infiltration,0,BENIGN,10944,2
+0,BENIGN,4,DDOS attack-HOIC,76,3
+2,Brute Force -Web,0,BENIGN,27,4
+10,FTP-BruteForce,8,DoS attacks-SlowHTTPTest,8,5
+8,DoS attacks-SlowHTTPTest,10,FTP-BruteForce,7,6
+0,BENIGN,9,DoS attacks-Slowloris,5,7
+1,Bot,0,BENIGN,3,8
+0,BENIGN,7,DoS attacks-Hulk,3,9
+0,BENIGN,1,Bot,2,10
+0,BENIGN,2,Brute Force -Web,2,11
+9,DoS attacks-Slowloris,0,BENIGN,2,12
+7,DoS attacks-Hulk,6,DoS attacks-GoldenEye,2,13
+3,Brute Force -XSS,11,Infiltration,2,14
+6,DoS attacks-GoldenEye,7,DoS attacks-Hulk,2,15
+0,BENIGN,3,Brute Force -XSS,1,16
+3,Brute Force -XSS,0,BENIGN,1,17
+0,BENIGN,12,SQL Injection,1,18
+2,Brute Force -Web,11,Infiltration,1,19
+2,Brute Force -Web,12,SQL Injection,1,20
+6,DoS attacks-GoldenEye,9,DoS attacks-Slowloris,1,21
+12,SQL Injection,2,Brute Force -Web,1,22
+12,SQL Injection,11,Infiltration,1,23

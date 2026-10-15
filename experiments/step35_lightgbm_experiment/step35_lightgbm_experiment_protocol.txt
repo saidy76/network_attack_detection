@@ -1,0 +1,120 @@
+STEP 35 - CONTROLLED LIGHTGBM EXPERIMENT
+=========================================
+
+Research Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Purpose:
+Evaluate a third heterogeneous tree-based learner (LightGBM) under the
+same validation protocol used for the existing Random Forest and XGBoost
+models.
+
+Data:
+Training:
+D:\network_attack_detection\data\modeling\balanced\CICIDS2018_train_B1_undersampled.csv
+
+Validation:
+D:\network_attack_detection\data\modeling\CICIDS2018_validation_selected.csv
+
+Test data:
+NOT USED.
+
+Training samples:
+1,044,091
+
+Validation samples:
+882,499
+
+Features:
+30 selected features.
+
+Classes:
+14 CIC-IDS2018 multiclass labels.
+
+Label encoding:
+The source CSV files contain string class labels.
+They are deterministically mapped to the project's fixed IDs:
+
+{
+  "0": "BENIGN",
+  "1": "Bot",
+  "2": "Brute Force -Web",
+  "3": "Brute Force -XSS",
+  "4": "DDOS attack-HOIC",
+  "5": "DDOS attack-LOIC-UDP",
+  "6": "DoS attacks-GoldenEye",
+  "7": "DoS attacks-Hulk",
+  "8": "DoS attacks-SlowHTTPTest",
+  "9": "DoS attacks-Slowloris",
+  "10": "FTP-BruteForce",
+  "11": "Infiltration",
+  "12": "SQL Injection",
+  "13": "SSH-Bruteforce"
+}
+
+Balancing:
+The already prepared B1 undersampled training dataset was used.
+No additional balancing was performed in Step 35.
+
+Hyperparameter optimization:
+NOT PERFORMED.
+
+Validation leakage:
+Validation data was not used for model fitting or hyperparameter search.
+
+Test leakage:
+No test-set data was used.
+
+Controlled LightGBM parameters:
+{
+  "objective": "multiclass",
+  "num_class": 14,
+  "n_estimators": 200,
+  "learning_rate": 0.05,
+  "num_leaves": 31,
+  "max_depth": -1,
+  "min_child_samples": 20,
+  "subsample": 1.0,
+  "colsample_bytree": 1.0,
+  "reg_alpha": 0.0,
+  "reg_lambda": 0.0,
+  "random_state": 42,
+  "n_jobs": -1,
+  "verbosity": -1
+}
+
+Validation metrics:
+Accuracy          : 0.684146
+Balanced Accuracy : 0.361540
+Macro Precision   : 0.264807
+Macro Recall      : 0.361540
+Macro F1          : 0.288712
+Weighted F1       : 0.760586
+
+Infiltration:
+Support           : 21,091
+Precision         : 0.032054
+Recall            : 0.118534
+F1                : 0.050462
+
+Total errors:
+278,741
+
+Top 20 error concentration:
+0.978198
+
+Research interpretation:
+LightGBM is evaluated as a third heterogeneous tabular learner.
+Its Macro F1 and difficult-class behaviour will be compared against the
+tuned Random Forest, tuned XGBoost, and previously evaluated probability
+fusion before the final ensemble decision.
+
+Important methodological note:
+The class-label issue encountered in the initial implementation was corrected.
+The CSV labels are strings, while the model internally operates on fixed
+numeric class IDs 0-13. Both training and validation labels are therefore
+explicitly encoded using the same project-wide mapping before fitting and
+evaluation.
+
+No additional training beyond this controlled LightGBM experiment was used.
+No test-set data was used.

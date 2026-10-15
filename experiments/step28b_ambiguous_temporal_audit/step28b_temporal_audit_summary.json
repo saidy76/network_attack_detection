@@ -1,0 +1,22 @@
+{
+    "step": "28B",
+    "purpose": "Detailed temporal audit of ambiguous B1-to-original row mappings.",
+    "ambiguous_b1_rows": 1570,
+    "same_timestamp_rows": 1570,
+    "different_timestamp_rows": 0,
+    "missing_timestamp_rows": 0,
+    "same_timestamp_rate": 1.0,
+    "different_timestamp_rate": 0.0,
+    "missing_timestamp_rate": 0.0,
+    "min_timestamp_difference_seconds": null,
+    "max_timestamp_difference_seconds": null,
+    "mean_timestamp_difference_seconds": null,
+    "median_timestamp_difference_seconds": null,
+    "p95_timestamp_difference_seconds": null,
+    "preliminary_interpretation": "AMBIGUOUS_FEATURE_MAPPING_BUT_TIMESTAMP_IS_IDENTICAL",
+    "original_rows": 4118328,
+    "b1_rows": 1044091,
+    "original_valid_timestamps": 4118328,
+    "original_invalid_timestamps": 0,
+    "runtime_seconds": 2649.808407306671
+}

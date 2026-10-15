@@ -1,0 +1,41 @@
+{
+    "step": 16,
+    "dataset": "CIC-IDS2018",
+    "input_files": {
+        "train": "CICIDS2018_train_selected.csv",
+        "validation": "CICIDS2018_validation_selected.csv",
+        "test": "CICIDS2018_test_selected.csv"
+    },
+    "train_rows": 14,
+    "validation_rows": 14,
+    "test_rows": 14,
+    "train_classes": 14,
+    "validation_classes": 14,
+    "test_classes": 14,
+    "training_majority_class": "BENIGN",
+    "training_minority_class": "DoS attacks-SlowHTTPTest",
+    "training_majority_count": 3574237,
+    "training_minority_count": 38,
+    "training_imbalance_ratio": 94058.86842105263,
+    "severe_minority_classes": [
+        "DoS attacks-GoldenEye",
+        "DoS attacks-Slowloris",
+        "DDOS attack-LOIC-UDP",
+        "Brute Force -Web",
+        "Brute Force -XSS",
+        "SQL Injection",
+        "DoS attacks-SlowHTTPTest",
+        "FTP-BruteForce"
+    ],
+    "minority_classes": [
+        "DDOS attack-HOIC",
+        "DoS attacks-Hulk",
+        "Bot",
+        "Infiltration",
+        "SSH-Bruteforce"
+    ],
+    "validation_modified": false,
+    "test_modified": false,
+    "smote_used": false,
+    "model_training": false
+}

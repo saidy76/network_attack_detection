@@ -1,0 +1,56 @@
+
+STEP 24 - RANDOM FOREST VS XGBOOST COMPARATIVE ANALYSIS
+
+Dataset:
+CIC-IDS2018
+
+Training representation:
+B1 undersampled
+
+Feature count:
+30
+
+Class count:
+14
+
+Comparison:
+Tuned Random Forest vs Tuned XGBoost
+
+Evaluation dataset:
+CICIDS2018_validation_selected.csv
+
+Primary metric:
+Macro F1
+
+Random Forest Macro F1:
+0.790499
+
+XGBoost Macro F1:
+0.741865
+
+XGBoost minus Random Forest Macro F1:
+-0.048634
+
+Primary model winner:
+Random Forest
+
+Random Forest per-class F1 wins:
+8
+
+XGBoost per-class F1 wins:
+4
+
+Per-class F1 ties:
+2
+
+Important:
+
+No additional training was performed in Step 24.
+
+No hyperparameter optimization was performed in Step 24.
+
+No validation data was used to tune either model.
+
+No test dataset was used.
+
+The comparison uses the completed outputs from Step 21 and Step 23.

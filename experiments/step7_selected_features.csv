@@ -1,0 +1,31 @@
+rank,feature
+1,Tot sum
+2,Header_Length
+3,Tot size
+4,AVG
+5,Protocol Type
+6,ack_count
+7,UDP
+8,Number
+9,TCP
+10,Max
+11,Std
+12,ICMP
+13,syn_count
+14,ack_flag_number
+15,psh_flag_number
+16,syn_flag_number
+17,Time_To_Live
+18,Variance
+19,fin_count
+20,Rate
+21,fin_flag_number
+22,HTTPS
+23,IAT
+24,Min
+25,rst_count
+26,HTTP
+27,rst_flag_number
+28,SSH
+29,DNS
+30,LLC

@@ -1,0 +1,7 @@
+Source,Matrix_Index,Accuracy_From_Matrix,Total_Samples
+B0_original_RandomForest,0,0.9064112253951563,882499
+B1_undersampled_RandomForest,0,0.929499070253904,882499
+B2_hybrid_RandomForest,0,0.9293358972644729,882499
+B0_original_XGBoost,0,0.8053810825847961,882499
+B1_undersampled_XGBoost,0,0.9522005124085127,882499
+B2_hybrid_XGBoost,0,0.9514549024984731,882499

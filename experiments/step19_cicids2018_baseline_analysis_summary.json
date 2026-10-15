@@ -1,0 +1,75 @@
+{
+    "step": 19,
+    "dataset": "CIC-IDS2018",
+    "purpose": "Baseline model analysis and comparative evaluation",
+    "validation_used": true,
+    "test_used": false,
+    "model_training_performed": false,
+    "feature_selection_performed": false,
+    "smote_used": false,
+    "primary_metric": "Macro_F1",
+    "secondary_metrics": [
+        "Balanced_Accuracy",
+        "Macro_Recall",
+        "Macro_Precision",
+        "Weighted_F1",
+        "Accuracy"
+    ],
+    "number_of_experiments": 6,
+    "models_evaluated": [
+        "RandomForest",
+        "XGBoost"
+    ],
+    "strategies_evaluated": [
+        "B0_original",
+        "B1_undersampled",
+        "B2_hybrid"
+    ],
+    "best_experiment": "B1_undersampled_RandomForest",
+    "best_model": "RandomForest",
+    "best_strategy": "B1_undersampled",
+    "best_macro_f1": 0.7602174722108809,
+    "best_balanced_accuracy": 0.7795865929080004,
+    "best_by_metric": {
+        "Accuracy": {
+            "Experiment": "B1_undersampled_XGBoost",
+            "Model": "XGBoost",
+            "Strategy": "B1_undersampled",
+            "Value": 0.9522005124085128
+        },
+        "Balanced_Accuracy": {
+            "Experiment": "B0_original_XGBoost",
+            "Model": "XGBoost",
+            "Strategy": "B0_original",
+            "Value": 0.8157586960970716
+        },
+        "Macro_Precision": {
+            "Experiment": "B1_undersampled_RandomForest",
+            "Model": "RandomForest",
+            "Strategy": "B1_undersampled",
+            "Value": 0.7527171300256877
+        },
+        "Macro_Recall": {
+            "Experiment": "B0_original_XGBoost",
+            "Model": "XGBoost",
+            "Strategy": "B0_original",
+            "Value": 0.8157586960970716
+        },
+        "Macro_F1": {
+            "Experiment": "B1_undersampled_RandomForest",
+            "Model": "RandomForest",
+            "Strategy": "B1_undersampled",
+            "Value": 0.7602174722108809
+        },
+        "Weighted_F1": {
+            "Experiment": "B1_undersampled_XGBoost",
+            "Model": "XGBoost",
+            "Strategy": "B1_undersampled",
+            "Value": 0.9593734417560598
+        }
+    },
+    "statistical_significance_claimed": false,
+    "statistical_limitation": "The baseline experiments were evaluated on the same fixed validation dataset. Step 18 provides aggregate metrics, per-class metrics, and confusion matrices, but does not retain sample-level prediction vectors required for paired prediction-level significance tests such as McNemar's test. Therefore, Step 19 reports descriptive comparisons, absolute differences, relative improvements, class-wise analysis, and Pareto-style comparisons rather than claiming statistical significance. A future repeated or cross-validation experiment can be used for formal statistical significance testing.",
+    "test_data_status": "Untouched and not loaded.",
+    "generated_at": "2026-08-24T15:05:34.658221"
+}

@@ -1,0 +1,7 @@
+Metric,Value
+Mean_All_Confidence,0.8972083330154419
+Mean_Correct_Confidence,0.903788149356842
+Mean_Incorrect_Confidence,0.7060606479644775
+Minimum_Confidence,0.24752949178218842
+Maximum_Confidence,1.0
+Median_Confidence,0.9412408471107483

@@ -1,0 +1,122 @@
+
+STEP 34 - BEST MODEL VALIDATION COMPARISON
+============================================================
+
+Research Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Purpose
+-------
+Compare previously completed validation results from:
+1. Tuned Random Forest
+2. Tuned XGBoost
+3. Equal-Weight Probability Fusion
+4. Previously completed LSTM
+
+Methodological Controls
+-----------------------
+- No additional model training.
+- No hyperparameter optimization.
+- No test-set data used.
+- Validation results only.
+- Primary selection metric: Macro F1.
+- Balanced Accuracy, Macro Precision, Macro Recall and Weighted F1
+  are also considered.
+- Difficult-class behaviour is explicitly analyzed.
+
+Primary Result
+--------------
+Best overall model by validation Macro F1:
+Tuned Random Forest
+
+Best Macro F1:
+0.790499
+
+Tabular Model Result
+--------------------
+Best tabular model:
+Tuned Random Forest
+
+Random Forest Macro F1:
+0.790499
+
+XGBoost Macro F1:
+0.741865
+
+Equal-Weight Fusion Macro F1:
+0.778144
+
+LSTM Macro F1:
+0.698254
+
+Macro F1 Differences
+--------------------
+XGB - RF:
+-0.048634
+
+Fusion - RF:
+-0.012355
+
+Fusion - XGB:
++0.036279
+
+LSTM - RF:
+-0.092245
+
+Infiltration
+------------
+RF F1:
+0.328424
+
+RF Recall:
+0.481106
+
+RF Precision:
+0.249306
+
+XGB F1:
+0.316404
+
+XGB Recall:
+0.457257
+
+XGB Precision:
+0.241892
+
+LSTM F1:
+0.248849
+
+Fusion Interpretation
+---------------------
+Equal-weight probability fusion does not improve Macro F1 over the tuned Random Forest.
+
+LSTM Interpretation
+-------------------
+The LSTM has lower validation Macro F1 than the tuned Random Forest.
+
+Step 35 Decision
+----------------
+JUSTIFIED FOR CONTROLLED EXPERIMENT
+
+Justification:
+RF currently provides the strongest Macro F1, while XGBoost shows different error behaviour on difficult classes. A controlled LightGBM experiment is therefore justified to test whether a third heterogeneous tree learner provides complementary class-level performance before the final ensemble decision. It must be evaluated using the same validation protocol and must not use the test set.
+
+Research Interpretation
+-----------------------
+The current validation evidence indicates that the tuned Random Forest
+is the strongest existing tabular model by Macro F1. XGBoost provides
+different class-level behaviour but does not exceed Random Forest on
+overall Macro F1. Equal-weight probability fusion also does not improve
+over Random Forest.
+
+The main substantial-support failure mode is Infiltration, where both
+tree models show a strong tendency to confuse Infiltration with BENIGN.
+Extremely rare classes such as FTP-BruteForce and DoS attacks-SlowHTTPTest
+must be interpreted cautiously because their validation support is very
+small.
+
+A controlled LightGBM experiment is retained for Step 35 because it can
+test whether a third heterogeneous tree learner provides complementary
+performance before the final ensemble decision.
+
+No test-set data was used in Step 34.

@@ -1,0 +1,103 @@
+{
+    "step": 34,
+    "title": "Best Model Validation Comparison",
+    "timestamp": "2026-08-30T17:59:10.111962",
+    "methodology": {
+        "additional_training": false,
+        "hyperparameter_optimization": false,
+        "test_set_used": false,
+        "validation_only": true,
+        "primary_metric": "Macro F1"
+    },
+    "best_overall_model_by_macro_f1": "Tuned Random Forest",
+    "best_overall_macro_f1": 0.7904989762654928,
+    "best_tabular_model": "Tuned Random Forest",
+    "metrics": {
+        "Random Forest": {
+            "Accuracy": 0.9528124111188796,
+            "Balanced_Accuracy": 0.7909960318842203,
+            "Macro_Precision": 0.7993259925674925,
+            "Macro_Recall": 0.7909960318842203,
+            "Macro_F1": 0.7904989762654928,
+            "Weighted_F1": 0.9599638953076722
+        },
+        "XGBoost": {
+            "Accuracy": 0.95261637690241,
+            "Balanced_Accuracy": 0.7642700299193443,
+            "Macro_Precision": 0.7264548567933523,
+            "Macro_Recall": 0.7642700299193443,
+            "Macro_F1": 0.7418650228249453,
+            "Weighted_F1": 0.9595988725619162
+        },
+        "Equal-Weight Probability Fusion": {
+            "Accuracy": 0.9539330922754586,
+            "Balanced_Accuracy": 0.7738586403293075,
+            "Macro_Precision": 0.7913031150948323,
+            "Macro_Recall": 0.7738586403293075,
+            "Macro_F1": 0.7781435413898342,
+            "Weighted_F1": 0.9605913961156036
+        },
+        "LSTM": {
+            "Accuracy": 0.966723,
+            "Balanced_Accuracy": 0.711654,
+            "Macro_Precision": 0.738513,
+            "Macro_Recall": 0.711654,
+            "Macro_F1": 0.698254
+        }
+    },
+    "macro_f1_deltas": {
+        "XGB_minus_RF": -0.04863395344054755,
+        "Fusion_minus_RF": -0.0123554348756586,
+        "Fusion_minus_XGB": 0.03627851856488895,
+        "LSTM_minus_RF": -0.09224497626549277
+    },
+    "important_difficult_classes": {
+        "Infiltration": {
+            "RF_F1": 0.3284243915069912,
+            "XGB_F1": 0.3164041994750656,
+            "Support": 21091
+        },
+        "FTP-BruteForce": {
+            "RF_F1": 0.0,
+            "XGB_F1": 0.0,
+            "Support": 8
+        },
+        "DoS attacks-SlowHTTPTest": {
+            "RF_F1": 0.2105263157894736,
+            "XGB_F1": 0.3,
+            "Support": 9
+        },
+        "Brute Force -Web": {
+            "RF_F1": 0.7746478873239436,
+            "XGB_F1": 0.5280898876404494,
+            "Support": 84
+        },
+        "SQL Injection": {
+            "RF_F1": 0.8461538461538461,
+            "XGB_F1": 0.4666666666666667,
+            "Support": 13
+        }
+    },
+    "infiltration": {
+        "RF_F1": 0.3284243915069912,
+        "RF_Recall": 0.4811056848892893,
+        "RF_Precision": 0.2493059138596103,
+        "XGB_F1": 0.3164041994750656,
+        "XGB_Recall": 0.45725664975582,
+        "XGB_Precision": 0.2418921969449948,
+        "LSTM_F1": 0.248849
+    },
+    "fusion_conclusion": "Equal-weight probability fusion does not improve Macro F1 over the tuned Random Forest.",
+    "lstm_conclusion": "The LSTM has lower validation Macro F1 than the tuned Random Forest.",
+    "step35_lightgbm_decision": "JUSTIFIED FOR CONTROLLED EXPERIMENT",
+    "step35_lightgbm_reason": "RF currently provides the strongest Macro F1, while XGBoost shows different error behaviour on difficult classes. A controlled LightGBM experiment is therefore justified to test whether a third heterogeneous tree learner provides complementary class-level performance before the final ensemble decision. It must be evaluated using the same validation protocol and must not use the test set.",
+    "research_findings": [
+        "1. Multiclass attack detection is evaluated using Macro F1 and Balanced Accuracy rather than accuracy alone.",
+        "2. Severe class imbalance is explicitly considered during model development.",
+        "3. Multiple heterogeneous learners are evaluated under a controlled validation protocol.",
+        "4. Probability-level fusion is empirically tested rather than assumed to improve performance.",
+        "5. Difficult-class and confusion-pair analysis identifies systematic failure modes.",
+        "6. Infiltration is identified as the dominant substantial-support error source.",
+        "7. The LSTM result is treated cautiously because the earlier sequence construction had a temporal-validity limitation."
+    ]
+}

@@ -1,0 +1,82 @@
+
+STEP 26 - LSTM MODEL TRAINING
+
+Dataset:
+CIC-IDS2018
+
+Training representation:
+B1 undersampled
+
+Sequence length:
+10
+
+Features per timestep:
+30
+
+Number of classes:
+14
+
+Architecture:
+LSTM(64)
+Dropout(0.3)
+LSTM(32)
+Dropout(0.3)
+Dense(14, softmax)
+
+Optimizer:
+Adam
+
+Learning rate:
+0.001
+
+Loss:
+Sparse Categorical Crossentropy
+
+Batch size:
+512
+
+Maximum epochs:
+30
+
+Early stopping patience:
+5
+
+Primary evaluation metric:
+Macro F1
+
+Validation Metrics:
+
+Accuracy:
+0.966723
+
+Balanced Accuracy:
+0.711654
+
+Macro Precision:
+0.738513
+
+Macro Recall:
+0.711654
+
+Macro F1:
+0.698254
+
+Weighted F1:
+0.964700
+
+Training time:
+1502.58 seconds
+
+Epochs completed:
+19
+
+Important:
+The scaler was fitted during Step 25 using training data only.
+
+The validation sequences were generated using the training-fitted scaler.
+
+No test dataset was used in Step 26.
+
+Early stopping and model checkpointing were used.
+
+The best validation-loss model was retained.

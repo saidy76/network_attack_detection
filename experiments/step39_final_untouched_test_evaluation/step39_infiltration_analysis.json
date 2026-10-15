@@ -1,0 +1,16 @@
+{
+  "class_name": "Infiltration",
+  "class_id": 11,
+  "support": 21092,
+  "precision": 0.24671916010498687,
+  "recall": 0.4768632656931538,
+  "f1": 0.3251911605425241,
+  "FPR": 0.035649773394256845,
+  "FNR": 0.5231367343068462,
+  "TP": 10058,
+  "FN": 11034,
+  "FP": 30709,
+  "TN": 830699,
+  "benign_to_infiltration": 30708,
+  "infiltration_to_benign": 11032
+}

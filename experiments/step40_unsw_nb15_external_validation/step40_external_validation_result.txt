@@ -1,0 +1,24 @@
+STEP 40 — UNSW-NB15 EXTERNAL / GENERALIZATION VALIDATION
+========================================================================================
+
+Strict feature compatibility: FAIL
+Frozen CIC features: 30
+UNSW candidate features: 42
+Exact feature overlap: 0 / 30
+External prediction performed: False
+
+DECISION
+INCOMPATIBLE — external prediction NOT performed.
+
+RESEARCH-INTEGRITY STATUS
+CIC-IDS2018 test set used: NO
+Training performed: NO
+Hyperparameter optimization: NO
+UNSW-based model selection: NO
+Artificial feature mapping: NO
+Fabricated external metrics: NO
+
+OUTPUT DIRECTORY
+D:\network_attack_detection\experiments\step40_unsw_nb15_external_validation
+
+Runtime: 2.88 seconds

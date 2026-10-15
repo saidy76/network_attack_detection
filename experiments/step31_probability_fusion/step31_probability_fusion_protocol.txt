@@ -1,0 +1,127 @@
+STEP 31 - PROBABILITY FUSION EVALUATION
+========================================
+
+Research Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Dataset:
+CIC-IDS2018
+
+Training representation:
+B1 undersampled
+
+Evaluation dataset:
+CICIDS2018_validation_selected.csv
+
+Feature count:
+30
+
+Class count:
+14
+
+Models:
+1. Step 21 Tuned Random Forest
+2. Step 23 Tuned XGBoost
+
+Fusion:
+Equal-weight probability fusion
+
+Formula:
+P_fused = 0.50 * P_RF + 0.50 * P_XGB
+
+Prediction:
+argmax(P_fused)
+
+Fusion weight optimization:
+NOT PERFORMED
+
+Reason:
+To avoid using the validation set for ensemble-weight
+selection before establishing an unbiased validation-stage
+ensemble result.
+
+Validation data:
+Used only for final evaluation of the already-defined
+equal-weight fusion.
+
+Test dataset:
+NOT USED
+
+Additional training:
+NOT PERFORMED
+
+Additional class balancing:
+NOT PERFORMED
+
+SMOTE:
+NOT USED
+
+Threshold manipulation:
+NOT PERFORMED
+
+Primary metric:
+Macro F1
+
+VALIDATION RESULTS
+------------------
+
+Random Forest Macro F1:
+0.790499
+
+XGBoost Macro F1:
+0.741865
+
+Probability Fusion Macro F1:
+0.778144
+
+Fusion minus Random Forest:
+-0.012355
+
+Fusion minus XGBoost:
++0.036279
+
+Random Forest class wins:
+5
+
+XGBoost class wins:
+1
+
+Probability Fusion class wins:
+3
+
+Ties:
+5
+
+PRIMARY RESULT
+--------------
+
+Fusion does not improve over Random Forest
+
+RESEARCH INTEGRITY
+------------------
+
+The Step 21 and Step 23 trained models were reused.
+
+No model was retrained.
+
+No validation information was used to optimize
+fusion weights.
+
+No test-set information was accessed.
+
+No additional preprocessing was introduced.
+
+No class-specific threshold manipulation was performed.
+
+This experiment is a validation-stage ensemble evaluation.
+
+The held-out CIC-IDS2018 test set remains reserved
+for the final evaluation stage.
+
+UNSW-NB15 remains reserved for external validation.
+
+CICIoT2023 remains the primary IoT dataset in the
+overall research architecture.
+
+Runtime seconds:
+41.446

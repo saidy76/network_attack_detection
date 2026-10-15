@@ -1,0 +1,2 @@
+Experiment,Dataset,Training_Strategy,Accuracy,Balanced_Accuracy,Macro_Precision,Macro_Recall,Macro_F1,Weighted_F1,Best_CV_Macro_F1,N_Iterations,CV_Folds,Random_State,Training_Samples,Validation_Samples,Feature_Count,Search_Time_Hours
+Step21_Tuned_RandomForest,CIC-IDS2018,B1_undersampled,0.9528124111188795,0.7909960318842203,0.7993259925674925,0.7909960318842203,0.7904989762654928,0.9599638953076722,0.8192559071794284,12,3,42,1044091,882499,30,2.8002709395355647

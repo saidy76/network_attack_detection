@@ -1,0 +1,2 @@
+total_samples,rf_correct,xgb_correct,fusion_correct,rf_xgb_disagreement_count,rf_xgb_disagreement_rate,both_correct,rf_correct_xgb_wrong,xgb_correct_rf_wrong,both_wrong,fusion_correct_rf_wrong,fusion_wrong_rf_correct
+882499,840856,840683,840856,13725,0.015552425555156436,833910,6946,6773,34870,0,0

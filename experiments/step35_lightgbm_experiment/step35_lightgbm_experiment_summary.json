@@ -1,0 +1,123 @@
+{
+  "step": 35,
+  "experiment": "Controlled LightGBM Experiment",
+  "project": "Behaviour Based Network Attack Detection System using Machine Learning",
+  "training_file": "D:\\network_attack_detection\\data\\modeling\\balanced\\CICIDS2018_train_B1_undersampled.csv",
+  "validation_file": "D:\\network_attack_detection\\data\\modeling\\CICIDS2018_validation_selected.csv",
+  "test_set_used": false,
+  "hyperparameter_optimization": false,
+  "training_samples": 1044091,
+  "validation_samples": 882499,
+  "feature_count": 30,
+  "class_count": 14,
+  "class_mapping": {
+    "0": "BENIGN",
+    "1": "Bot",
+    "2": "Brute Force -Web",
+    "3": "Brute Force -XSS",
+    "4": "DDOS attack-HOIC",
+    "5": "DDOS attack-LOIC-UDP",
+    "6": "DoS attacks-GoldenEye",
+    "7": "DoS attacks-Hulk",
+    "8": "DoS attacks-SlowHTTPTest",
+    "9": "DoS attacks-Slowloris",
+    "10": "FTP-BruteForce",
+    "11": "Infiltration",
+    "12": "SQL Injection",
+    "13": "SSH-Bruteforce"
+  },
+  "parameters": {
+    "objective": "multiclass",
+    "num_class": 14,
+    "n_estimators": 200,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "max_depth": -1,
+    "min_child_samples": 20,
+    "subsample": 1.0,
+    "colsample_bytree": 1.0,
+    "reg_alpha": 0.0,
+    "reg_lambda": 0.0,
+    "random_state": 42,
+    "n_jobs": -1,
+    "verbosity": -1
+  },
+  "training_runtime_seconds": 137.5831389427185,
+  "prediction_runtime_seconds": 25.450217962265015,
+  "metrics": {
+    "Accuracy": 0.684145817728972,
+    "Balanced_Accuracy": 0.3615396999566685,
+    "Macro_Precision": 0.2648070226020702,
+    "Macro_Recall": 0.3615396999566685,
+    "Macro_F1": 0.2887118687326454,
+    "Weighted_F1": 0.7605863775175131
+  },
+  "infiltration": {
+    "support": 21091,
+    "true_positive": 2500,
+    "false_negative": 18591,
+    "false_positive": 75494,
+    "precision": 0.032053747724183915,
+    "recall": 0.11853397183632829,
+    "f1": 0.050461724781753044
+  },
+  "total_errors": 278741,
+  "top_20_error_concentration": 0.9781983992308272,
+  "difficult_classes": [
+    {
+      "Difficulty_Rank": 1,
+      "Class_ID": 10,
+      "Label": "FTP-BruteForce",
+      "Support": 8,
+      "F1": 0.0,
+      "Recall": 0.0,
+      "Precision": 0.0,
+      "Error_Rate": 1.0,
+      "Error_Count": 8
+    },
+    {
+      "Difficulty_Rank": 2,
+      "Class_ID": 8,
+      "Label": "DoS attacks-SlowHTTPTest",
+      "Support": 9,
+      "F1": 0.0,
+      "Recall": 0.0,
+      "Precision": 0.0,
+      "Error_Rate": 1.0,
+      "Error_Count": 9
+    },
+    {
+      "Difficulty_Rank": 3,
+      "Class_ID": 12,
+      "Label": "SQL Injection",
+      "Support": 13,
+      "F1": 0.0,
+      "Recall": 0.0,
+      "Precision": 0.0,
+      "Error_Rate": 1.0,
+      "Error_Count": 13
+    },
+    {
+      "Difficulty_Rank": 4,
+      "Class_ID": 3,
+      "Label": "Brute Force -XSS",
+      "Support": 34,
+      "F1": 0.0,
+      "Recall": 0.0,
+      "Precision": 0.0,
+      "Error_Rate": 1.0,
+      "Error_Count": 34
+    },
+    {
+      "Difficulty_Rank": 5,
+      "Class_ID": 2,
+      "Label": "Brute Force -Web",
+      "Support": 84,
+      "F1": 0.0,
+      "Recall": 0.0,
+      "Precision": 0.0,
+      "Error_Rate": 1.0,
+      "Error_Count": 84
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+Actual_Class,Actual_Class_ID,Predicted_Class_ID,Predicted_Label,Count,Percentage_of_Infiltration
+Infiltration,11,0,BENIGN,10944,0.5188943151107107
+Infiltration,11,11,Infiltration,10147,0.4811056848892893

@@ -1,0 +1,102 @@
+STEP 32 - RANDOM FOREST DIFFICULT-CLASS & ERROR ANALYSIS
+
+Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Dataset:
+CIC-IDS2018
+
+Evaluation dataset:
+CICIDS2018_validation_selected.csv
+
+Model:
+Step 21 tuned Random Forest
+
+Training representation:
+B1 undersampled
+
+Feature count:
+30
+
+Class count:
+14
+
+Validation samples:
+882,499
+
+Overall validation metrics:
+
+Accuracy:
+0.952812
+
+Balanced Accuracy:
+0.790996
+
+Macro Precision:
+0.799326
+
+Macro Recall:
+0.790996
+
+Macro F1:
+0.790499
+
+Weighted F1:
+0.959964
+
+Error analysis:
+
+Correct predictions:
+840,856
+
+Total classification errors:
+41,643
+
+Top 20 confusion error count:
+41,640
+
+Top 20 error concentration:
+0.999928
+
+Infiltration:
+
+Support:
+21,091
+
+True Positive:
+10,147
+
+False Negative:
+10,944
+
+False Positive:
+30,554
+
+Recall:
+0.481106
+
+Precision:
+0.249306
+
+Rare class definition:
+Support <= 100
+
+Methodological controls:
+
+1. Existing Step 21 Random Forest was reused.
+2. No additional model training was performed.
+3. No hyperparameter optimization was performed.
+4. Validation data was used only for post-training error analysis.
+5. Test data was not used.
+6. No additional balancing was performed.
+7. No feature selection was performed.
+8. Analysis focused on difficult classes and confusion patterns.
+9. Results are intended to determine the evidence-based priorities for Step 33.
+
+Primary purpose:
+
+Identify the dominant failure modes of the current best Random Forest
+before attempting any model improvement.
+
+This step does not claim novelty by itself.
+It provides empirical evidence for subsequent research decisions.

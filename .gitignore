@@ -1,0 +1,88 @@
+# Python environment
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Raw datasets - keep local
+data/raw/
+datasets/
+*.pcap
+*.pcapng
+
+# Temporary files and caches
+tmp/
+temp/
+.cache/
+*.tmp
+
+# All local datasets and generated modeling data
+data/
+archive/old_pipeline/data/
+
+# Local environment and installer
+venv/
+*.msi
+
+# Temporary VS Code runner
+src/tempCodeRunnerFile.py
+
+# Large trained models - retain locally
+*.joblib
+*.keras
+*.h5
+*.pkl
+
+# Large generated arrays and intermediate predictions
+*.npy
+experiments/step31_probability_fusion/step31_fused_probabilities.csv
+experiments/step28_mapping_audit/step28_unique_mapped_rows_with_timestamp.csv
+experiments/step30_raw_timestamp_recovery_audit/step30_original_train_raw_timestamp_recovery.csv
+
+# Generated dataset files
+data/
+archive/old_pipeline/data/
+
+# Local environment and installer
+venv/
+*.msi
+
+# Temporary editor files
+src/tempCodeRunnerFile.py
+
+# Large trained models - retain locally
+*.joblib
+*.keras
+*.h5
+*.pkl
+
+# Large generated arrays and intermediate predictions
+*.npy
+experiments/step31_probability_fusion/step31_fused_probabilities.csv
+experiments/step28_mapping_audit/step28_unique_mapped_rows_with_timestamp.csv
+experiments/step30_raw_timestamp_recovery_audit/step30_original_train_raw_timestamp_recovery.csv
+
+# Generated dataset files
+data/
+archive/old_pipeline/data/
+
+# Local environment and installer
+venv/
+*.msi
+
+# Temporary editor files
+src/tempCodeRunnerFile.py

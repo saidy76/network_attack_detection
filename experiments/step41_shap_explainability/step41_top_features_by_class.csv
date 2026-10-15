@@ -1,0 +1,15 @@
+class,rank_1,rank_2,rank_3,rank_4,rank_5,rank_6,rank_7,rank_8,rank_9,rank_10
+BENIGN,Dst Port,Init Fwd Win Byts,Fwd Seg Size Min,RST Flag Cnt,Flow Duration,Bwd Pkt Len Std,Bwd Pkt Len Mean,Fwd IAT Tot,TotLen Bwd Pkts,Bwd Pkts/s
+Bot,Dst Port,RST Flag Cnt,Init Fwd Win Byts,Fwd Seg Size Min,Bwd Pkts/s,Bwd Pkt Len Mean,Fwd Pkt Len Std,TotLen Bwd Pkts,Flow Duration,Fwd IAT Tot
+Brute Force -Web,RST Flag Cnt,Init Fwd Win Byts,Dst Port,Fwd Seg Size Min,Fwd Pkt Len Std,Fwd Pkt Len Max,Bwd IAT Tot,Init Bwd Win Byts,Flow Duration,TotLen Fwd Pkts
+Brute Force -XSS,Dst Port,Fwd IAT Min,Init Fwd Win Byts,Fwd Seg Size Min,Flow Duration,Flow IAT Min,Fwd IAT Tot,Bwd Pkt Len Mean,Bwd Pkts/s,Tot Fwd Pkts
+DDOS attack-HOIC,Init Fwd Win Byts,Dst Port,Fwd Header Len,Bwd Pkt Len Std,Fwd IAT Tot,Fwd Seg Size Min,Flow Duration,RST Flag Cnt,Flow IAT Std,Bwd Pkt Len Mean
+DDOS attack-LOIC-UDP,Init Fwd Win Byts,Fwd Act Data Pkts,Fwd Header Len,Dst Port,Fwd Seg Size Min,Tot Fwd Pkts,Bwd Pkt Len Mean,TotLen Fwd Pkts,Flow Byts/s,Fwd IAT Tot
+DoS attacks-GoldenEye,Fwd Seg Size Min,Dst Port,Init Fwd Win Byts,Fwd Header Len,Flow Duration,Init Bwd Win Byts,Fwd IAT Min,Bwd IAT Min,Tot Fwd Pkts,Fwd Act Data Pkts
+DoS attacks-Hulk,Fwd Seg Size Min,Dst Port,Init Fwd Win Byts,Flow Duration,Fwd Header Len,Bwd Pkt Len Std,Bwd IAT Min,Fwd IAT Min,Bwd Pkt Len Mean,Fwd Act Data Pkts
+DoS attacks-SlowHTTPTest,Init Fwd Win Byts,Dst Port,Fwd Seg Size Min,Fwd IAT Tot,Fwd IAT Min,Bwd Pkts/s,Fwd Header Len,Fwd Act Data Pkts,Init Bwd Win Byts,Flow Duration
+DoS attacks-Slowloris,Fwd Seg Size Min,Dst Port,Init Fwd Win Byts,Bwd Pkt Len Std,Fwd IAT Min,Fwd Header Len,Flow Duration,Init Bwd Win Byts,Fwd Pkt Len Max,Bwd Pkts/s
+FTP-BruteForce,Dst Port,Init Fwd Win Byts,Fwd Seg Size Min,Fwd IAT Tot,Fwd IAT Min,Bwd Pkts/s,Flow Duration,Fwd Header Len,Fwd Act Data Pkts,Tot Fwd Pkts
+Infiltration,Init Fwd Win Byts,RST Flag Cnt,Dst Port,Fwd Seg Size Min,Bwd Pkt Len Std,Flow IAT Min,Flow Duration,TotLen Bwd Pkts,Bwd Pkt Len Mean,Fwd IAT Tot
+SQL Injection,Dst Port,RST Flag Cnt,Init Fwd Win Byts,Fwd IAT Tot,Fwd Seg Size Min,Flow Duration,Bwd Pkts/s,Init Bwd Win Byts,Flow IAT Min,Bwd IAT Min
+SSH-Bruteforce,Fwd Act Data Pkts,Init Fwd Win Byts,Fwd Seg Size Min,Dst Port,TotLen Bwd Pkts,Fwd Header Len,Tot Bwd Pkts,Tot Fwd Pkts,Bwd Pkts/s,Flow Duration

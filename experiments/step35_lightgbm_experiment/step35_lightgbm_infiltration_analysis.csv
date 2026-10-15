@@ -1,0 +1,15 @@
+Actual_Class,Actual_Class_ID,Predicted_Class_ID,Predicted_Label,Count,Percentage_of_Infiltration
+Infiltration,11,0,BENIGN,12341,0.585131098572851
+Infiltration,11,1,Bot,4083,0.19358968280309136
+Infiltration,11,2,Brute Force -Web,107,0.005073253994594851
+Infiltration,11,3,Brute Force -XSS,136,0.006448248067896259
+Infiltration,11,4,DDOS attack-HOIC,694,0.032905030581764735
+Infiltration,11,5,DDOS attack-LOIC-UDP,511,0.024228343843345504
+Infiltration,11,6,DoS attacks-GoldenEye,181,0.008581859560950169
+Infiltration,11,7,DoS attacks-Hulk,371,0.017590441420511117
+Infiltration,11,8,DoS attacks-SlowHTTPTest,39,0.0018491299606467214
+Infiltration,11,9,DoS attacks-Slowloris,26,0.0012327533070978143
+Infiltration,11,10,FTP-BruteForce,26,0.0012327533070978143
+Infiltration,11,11,Infiltration,2500,0.11853397183632829
+Infiltration,11,12,SQL Injection,9,0.00042672229861078187
+Infiltration,11,13,SSH-Bruteforce,67,0.0031767104452135983

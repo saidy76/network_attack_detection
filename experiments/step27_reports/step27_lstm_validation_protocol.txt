@@ -1,0 +1,54 @@
+STEP 27 - LSTM VALIDATION & ERROR ANALYSIS
+
+Objective:
+Rigorous validation and error analysis of the best LSTM model
+selected during Step 26 training.
+
+Validation data:
+D:\network_attack_detection\experiments\step25_lstm\step25_X_validation_sequences.npy
+
+Model:
+D:\network_attack_detection\experiments\step26_lstm\step26_best_lstm.keras
+
+Sequence length:
+10
+
+Features per sequence step:
+30
+
+Number of classes:
+14
+
+Validation samples:
+882490
+
+Performance:
+Accuracy = 0.966723
+Balanced Accuracy = 0.711654
+Macro Precision = 0.738513
+Macro Recall = 0.711654
+Macro F1 = 0.698254
+Weighted F1 = 0.964700
+
+Error analysis:
+Correct predictions = 853123
+Incorrect predictions = 29367
+Overall error rate = 0.033277
+
+Confidence analysis:
+Mean confidence = 0.897208
+Mean correct confidence = 0.903788
+Mean incorrect confidence = 0.706061
+
+Important interpretation:
+Accuracy and weighted F1 should not be interpreted in isolation
+because the validation set is highly class-imbalanced.
+Macro F1, balanced accuracy, per-class recall, per-class F1,
+confusion matrices, and error concentration are therefore
+reported for rigorous model assessment.
+
+Sequence-design consideration:
+The temporal validity of the sequence construction should be
+considered during research interpretation. Consecutive rows in
+a tabular network-flow dataset do not automatically guarantee
+that all observations belong to the same temporal/session stream.

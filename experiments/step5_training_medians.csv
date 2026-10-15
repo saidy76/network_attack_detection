@@ -1,0 +1,40 @@
+feature,training_median
+Header_Length,20.0
+Protocol Type,6.0
+Time_To_Live,64.0
+Rate,3249.811332450044
+fin_flag_number,0.0
+syn_flag_number,0.0
+rst_flag_number,0.0
+psh_flag_number,0.0
+ack_flag_number,0.02
+ece_flag_number,0.0
+cwr_flag_number,0.0
+ack_count,2.0
+syn_count,0.0
+fin_count,0.0
+rst_count,0.0
+HTTP,0.0
+HTTPS,0.0
+DNS,0.0
+Telnet,0.0
+SMTP,0.0
+SSH,0.0
+IRC,0.0
+TCP,0.8
+UDP,0.0
+DHCP,0.0
+ARP,0.0
+ICMP,0.0
+IGMP,0.0
+IPv,1.0
+LLC,1.0
+Tot sum,6006.0
+Min,60.0
+Max,326.0
+AVG,117.46
+Std,46.122542090488565
+Tot size,117.46
+IAT,0.0003182101249694
+Number,100.0
+Variance,2127.288888888889

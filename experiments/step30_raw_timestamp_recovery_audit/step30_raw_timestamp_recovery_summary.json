@@ -1,0 +1,98 @@
+{
+    "step": "30",
+    "purpose": "Recover and validate original CICIDS2018 timestamps from raw TrafficForML_CICFlowMeter CSV files.",
+    "raw_directory": "D:\\network_attack_detection\\data\\cicids2018",
+    "raw_file_count": 9,
+    "original_train_path": "D:\\network_attack_detection\\data\\modeling\\CICIDS2018_train.csv",
+    "b1_train_path": "D:\\network_attack_detection\\data\\modeling\\balanced\\CICIDS2018_train_B1_undersampled.csv",
+    "original_train_rows": 4118328,
+    "b1_rows": 1044091,
+    "raw_rows_scanned": 8284254,
+    "total_raw_matching_rows": 136456,
+    "original_unique_hash_groups": 4112757,
+    "original_duplicate_hash_groups": 5571,
+    "maximum_original_hash_multiplicity": 2,
+    "b1_unique_hash_matches": 1042521,
+    "b1_ambiguous_hash_matches": 1570,
+    "b1_unmatched_hashes": 0,
+    "original_rows_recovered_from_raw": 44307,
+    "original_rows_unmatched_from_raw": 4074021,
+    "original_rows_with_multiple_raw_matches": 674,
+    "duplicate_raw_matches": 92149,
+    "valid_original_recovered_timestamps": 44307,
+    "invalid_original_recovered_timestamps": 4074021,
+    "b1_valid_recovered_timestamps": 44307,
+    "b1_missing_timestamps": 999784,
+    "b1_recovery_rate": 0.04243595625285535,
+    "b1_unique_mapping_timestamp_recovery": 44307,
+    "b1_ambiguous_identical_timestamp_recovery": 0,
+    "b1_negative_time_differences": 22189,
+    "b1_zero_time_differences": 3,
+    "b1_positive_time_differences": 22114,
+    "b1_unique_timestamps": 15856,
+    "b1_duplicated_timestamp_rows": 28451,
+    "positive_gap_count": 22114,
+    "minimum_positive_gap_seconds": 1.0,
+    "maximum_positive_gap_seconds": 43043.0,
+    "median_positive_gap_seconds": 23362.5,
+    "p95_positive_gap_seconds": 36014.35,
+    "chronological_order_non_decreasing": false,
+    "final_status": "INSUFFICIENT_RAW_TIMESTAMP_RECOVERY",
+    "runtime_seconds": 352.8854434490204,
+    "raw_file_statistics": [
+        {
+            "file": "Friday-02-03-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 1048575,
+            "matching_rows": 136456,
+            "runtime_seconds": 25.717869997024536
+        },
+        {
+            "file": "Friday-16-02-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 1048575,
+            "matching_rows": 0,
+            "runtime_seconds": 14.178423643112183
+        },
+        {
+            "file": "Friday-23-02-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 1048575,
+            "matching_rows": 0,
+            "runtime_seconds": 13.829068422317505
+        },
+        {
+            "file": "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 331125,
+            "matching_rows": 0,
+            "runtime_seconds": 5.592770099639893
+        },
+        {
+            "file": "Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 1048575,
+            "matching_rows": 0,
+            "runtime_seconds": 13.722472667694092
+        },
+        {
+            "file": "Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 1048575,
+            "matching_rows": 0,
+            "runtime_seconds": 14.627776622772217
+        },
+        {
+            "file": "Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 1048575,
+            "matching_rows": 0,
+            "runtime_seconds": 12.31667447090149
+        },
+        {
+            "file": "Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 1048575,
+            "matching_rows": 0,
+            "runtime_seconds": 11.748517513275146
+        },
+        {
+            "file": "Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv",
+            "rows_scanned": 613104,
+            "matching_rows": 0,
+            "runtime_seconds": 14.634776592254639
+        }
+    ]
+}

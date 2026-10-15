@@ -1,0 +1,120 @@
+STEP 38 — ENSEMBLE VALIDATION + ERROR ANALYSIS
+========================================================================================
+
+PROJECT: Behaviour Based Network Attack Detection System using Machine Learning
+
+RESEARCH INTEGRITY
+----------------------------------------------------------------------------------------
+Test set used: NO
+Training performed: NO
+Hyperparameter optimization performed: NO
+Data used: CIC-IDS2018 validation set only
+Primary model-selection metric: Macro F1
+Secondary primary metric: Balanced Accuracy
+
+VALIDATION DATASET
+----------------------------------------------------------------------------------------
+Path: D:\network_attack_detection\data\modeling\CICIDS2018_validation_selected.csv
+Rows: 882,499
+Features: 30
+Classes: 14
+
+MODEL DECISION FROM STEP 37
+----------------------------------------------------------------------------------------
+RF + XGBoost probability fusion was evaluated using controlled weights.
+No fusion configuration improved the tuned Random Forest.
+Therefore, Random Forest remains the final primary candidate.
+
+STEP 37 BEST CONFIGURATION
+----------------------------------------------------------------------------------------
+RF weight: 1.00
+XGB weight: 0.00
+Interpretation: the selected configuration is equivalent to RF-only.
+
+RANDOM FOREST VALIDATION METRICS
+----------------------------------------------------------------------------------------
+accuracy: 0.9528124111188795
+balanced_accuracy: 0.7909960318842203
+macro_precision: 0.7993259925674925
+macro_recall: 0.7909960318842203
+macro_f1: 0.7904989762654928
+weighted_f1: 0.9599638953076722
+roc_auc_ovr_macro: 0.9937585526933184
+roc_auc_ovr_weighted: 0.9854187685146767
+roc_auc_ovr_mean_per_class: 0.9937585526933184
+pr_auc_macro_average_precision: 0.8311594268548189
+pr_auc_weighted_average_precision: 0.9807442299850574
+
+STEP 37 BEST FUSION VALIDATION METRICS
+----------------------------------------------------------------------------------------
+accuracy: 0.9528124111188795
+balanced_accuracy: 0.7909960318842203
+macro_precision: 0.7993259925674925
+macro_recall: 0.7909960318842203
+macro_f1: 0.7904989762654928
+weighted_f1: 0.9599638953076722
+roc_auc_ovr_macro: 0.9937585526933184
+roc_auc_ovr_weighted: 0.9854187685146767
+roc_auc_ovr_mean_per_class: 0.9937585526933184
+pr_auc_macro_average_precision: 0.8311594268548189
+pr_auc_weighted_average_precision: 0.9807442299850574
+
+PREDICTION-LEVEL COMPLEMENTARITY
+----------------------------------------------------------------------------------------
+total_samples: 882499
+rf_correct: 840856
+xgb_correct: 840683
+fusion_correct: 840856
+rf_xgb_disagreement_count: 13725
+rf_xgb_disagreement_rate: 0.015552425555156436
+both_correct: 833910
+rf_correct_xgb_wrong: 6946
+xgb_correct_rf_wrong: 6773
+both_wrong: 34870
+fusion_correct_rf_wrong: 0
+fusion_wrong_rf_correct: 0
+
+FUSION ERROR CHANGE ANALYSIS
+----------------------------------------------------------------------------------------
+total_samples: 882499
+rf_correct_fusion_correct: 840856
+rf_correct_fusion_wrong: 0
+rf_wrong_fusion_correct: 0
+rf_wrong_fusion_wrong: 41643
+net_correct_change: 0
+
+INFILTRATION ANALYSIS
+----------------------------------------------------------------------------------------
+{
+    "class": "Infiltration",
+    "class_id": 11,
+    "support": 21091,
+    "rf": {
+        "TP": 10147,
+        "FN": 10944,
+        "FP": 30554,
+        "recall": 0.4811056848892893,
+        "precision": 0.24930591385961032
+    },
+    "best_step37_fusion": {
+        "rf_weight": 1.0,
+        "xgb_weight": 0.0,
+        "TP": 10147,
+        "FN": 10944,
+        "FP": 30554,
+        "recall": 0.4811056848892893,
+        "precision": 0.24930591385961032
+    }
+}
+
+INTERPRETATION
+----------------------------------------------------------------------------------------
+The purpose of Step 38 is not to introduce another model or perform
+additional training. It provides comprehensive validation evidence
+for the model-selection decision made using the validation set.
+Rare classes with very small support must be interpreted cautiously.
+Substantial-support difficult classes, particularly Infiltration,
+receive greater analytical emphasis.
+The untouched CIC-IDS2018 test set remains reserved for Step 39.
+
+Runtime: 38.90 seconds

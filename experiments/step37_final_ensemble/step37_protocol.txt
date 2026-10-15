@@ -1,0 +1,107 @@
+STEP 37 — FINAL RF + XGBoost HETEROGENEOUS ENSEMBLE CONSTRUCTION
+
+Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Dataset:
+CIC-IDS2018
+
+Evaluation split:
+Validation only
+
+Validation samples:
+882,499
+
+Features:
+30
+
+Classes:
+14
+
+Primary model:
+Tuned Random Forest
+
+Complementary candidate:
+Tuned XGBoost
+
+Fusion method:
+Weighted probability averaging
+
+Formula:
+P_fusion = w_RF * P_RF + w_XGB * P_XGB
+
+Controlled weights:
+[(1.0, 0.0), (0.9, 0.1), (0.8, 0.2), (0.7, 0.3), (0.6, 0.4), (0.5, 0.5), (0.4, 0.6), (0.3, 0.7), (0.2, 0.8), (0.1, 0.9), (0.0, 1.0)]
+
+Random Forest baseline:
+Macro F1 = 0.790499
+Balanced Accuracy = 0.790996
+
+XGBoost baseline:
+Macro F1 = 0.741865
+Balanced Accuracy = 0.764270
+
+Best validation configuration:
+RF_1.0_XGB_0.0
+
+Best RF weight:
+1.0
+
+Best XGBoost weight:
+0.0
+
+Best configuration Macro F1:
+0.790499
+
+Best configuration Balanced Accuracy:
+0.790996
+
+Macro F1 delta versus RF:
++0.000000
+
+Balanced Accuracy delta versus RF:
++0.000000
+
+Ensemble improves RF:
+False
+
+Decision:
+RF remains optimal; no XGBoost fusion weight improved RF.
+
+Final candidate after Step 37:
+Tuned Random Forest
+
+Prediction-level complementarity:
+Explicitly evaluated.
+
+Analyses performed:
+- RF/XGB agreement
+- RF/XGB disagreement
+- RF-only correct predictions
+- XGB-only correct predictions
+- both-correct predictions
+- both-wrong predictions
+- class-specific disagreement
+- weighted fusion
+- error correction versus RF
+- fusion-introduced errors
+- Infiltration-specific analysis
+- rare-class analysis
+- substantial-support difficult-class analysis
+
+Research integrity:
+- Test set NOT used
+- No training performed
+- No hyperparameter optimization performed
+- Fixed 14-class mapping
+- Fixed 30-feature structure
+- Feature order verified
+- Probability dimensions verified
+- Class ordering verified
+- Validation-only ensemble selection
+
+Test set status:
+UNTOUCHED
+
+Runtime:
+33.90 seconds

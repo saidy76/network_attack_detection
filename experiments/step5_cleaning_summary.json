@@ -1,0 +1,33 @@
+{
+    "step": 5,
+    "dataset": "CICIoT2023",
+    "train_shape": [
+        959637,
+        41
+    ],
+    "validation_shape": [
+        205637,
+        41
+    ],
+    "test_shape": [
+        205637,
+        41
+    ],
+    "final_feature_count": 39,
+    "constant_features_removed": [],
+    "training_median_imputation": true,
+    "scaler_fitted": false,
+    "smote_applied": false,
+    "feature_selection_applied": false,
+    "model_training": false,
+    "final_missing_values": {
+        "train": 0,
+        "validation": 0,
+        "test": 0
+    },
+    "final_infinity_values": {
+        "train": 0,
+        "validation": 0,
+        "test": 0
+    }
+}

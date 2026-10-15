@@ -1,0 +1,223 @@
+{
+    "step": 38,
+    "title": "Ensemble Validation + Error Analysis",
+    "status": "COMPLETED",
+    "project_root": "D:\\network_attack_detection",
+    "validation_dataset": "D:\\network_attack_detection\\data\\modeling\\CICIDS2018_validation_selected.csv",
+    "test_set_used": false,
+    "training_performed": false,
+    "hyperparameter_optimization_performed": false,
+    "primary_metric": "macro_f1",
+    "number_of_classes": 14,
+    "number_of_features": 30,
+    "validation_rows": 882499,
+    "selected_candidate": "Tuned Random Forest",
+    "step37_best_rf_weight": 1.0,
+    "step37_best_xgb_weight": 0.0,
+    "rf_metrics": {
+        "accuracy": 0.9528124111188795,
+        "balanced_accuracy": 0.7909960318842203,
+        "macro_precision": 0.7993259925674925,
+        "macro_recall": 0.7909960318842203,
+        "macro_f1": 0.7904989762654928,
+        "weighted_f1": 0.9599638953076722,
+        "roc_auc_ovr_macro": 0.9937585526933184,
+        "roc_auc_ovr_weighted": 0.9854187685146767,
+        "roc_auc_ovr_mean_per_class": 0.9937585526933184,
+        "pr_auc_macro_average_precision": 0.8311594268548189,
+        "pr_auc_weighted_average_precision": 0.9807442299850574
+    },
+    "step37_best_fusion_metrics": {
+        "accuracy": 0.9528124111188795,
+        "balanced_accuracy": 0.7909960318842203,
+        "macro_precision": 0.7993259925674925,
+        "macro_recall": 0.7909960318842203,
+        "macro_f1": 0.7904989762654928,
+        "weighted_f1": 0.9599638953076722,
+        "roc_auc_ovr_macro": 0.9937585526933184,
+        "roc_auc_ovr_weighted": 0.9854187685146767,
+        "roc_auc_ovr_mean_per_class": 0.9937585526933184,
+        "pr_auc_macro_average_precision": 0.8311594268548189,
+        "pr_auc_weighted_average_precision": 0.9807442299850574
+    },
+    "rf_vs_fusion_macro_f1_delta": 0.0,
+    "rf_vs_fusion_balanced_accuracy_delta": 0.0,
+    "prediction_level_complementarity": {
+        "total_samples": 882499,
+        "rf_correct": 840856,
+        "xgb_correct": 840683,
+        "fusion_correct": 840856,
+        "rf_xgb_disagreement_count": 13725,
+        "rf_xgb_disagreement_rate": 0.015552425555156436,
+        "both_correct": 833910,
+        "rf_correct_xgb_wrong": 6946,
+        "xgb_correct_rf_wrong": 6773,
+        "both_wrong": 34870,
+        "fusion_correct_rf_wrong": 0,
+        "fusion_wrong_rf_correct": 0
+    },
+    "fusion_error_changes": {
+        "total_samples": 882499,
+        "rf_correct_fusion_correct": 840856,
+        "rf_correct_fusion_wrong": 0,
+        "rf_wrong_fusion_correct": 0,
+        "rf_wrong_fusion_wrong": 41643,
+        "net_correct_change": 0
+    },
+    "infiltration_analysis": {
+        "class": "Infiltration",
+        "class_id": 11,
+        "support": 21091,
+        "rf": {
+            "TP": 10147,
+            "FN": 10944,
+            "FP": 30554,
+            "recall": 0.4811056848892893,
+            "precision": 0.24930591385961032
+        },
+        "best_step37_fusion": {
+            "rf_weight": 1.0,
+            "xgb_weight": 0.0,
+            "TP": 10147,
+            "FN": 10944,
+            "FP": 30554,
+            "recall": 0.4811056848892893,
+            "precision": 0.24930591385961032
+        }
+    },
+    "key_substantial_support_difficult_classes": [
+        {
+            "class_id": 11,
+            "class_name": "Infiltration",
+            "support": 21091,
+            "precision": 0.24930591385961032,
+            "recall": 0.4811056848892893,
+            "f1": 0.3284243915069912,
+            "FPR": 0.035469835432222596,
+            "FNR": 0.5188943151107107
+        },
+        {
+            "class_id": 0,
+            "class_name": "BENIGN",
+            "support": 765908,
+            "precision": 0.9852903537042125,
+            "recall": 0.9599951952453819,
+            "f1": 0.9724783140330376,
+            "FPR": 0.09414963419131837,
+            "FNR": 0.04000480475461805
+        },
+        {
+            "class_id": 9,
+            "class_name": "DoS attacks-Slowloris",
+            "support": 1486,
+            "precision": 0.9959731543624161,
+            "recall": 0.9986541049798116,
+            "f1": 0.9973118279569892,
+            "FPR": 6.810342185643117e-06,
+            "FNR": 0.0013458950201884253
+        },
+        {
+            "class_id": 4,
+            "class_name": "DDOS attack-HOIC",
+            "support": 29829,
+            "precision": 0.9974586189600402,
+            "recall": 1.0,
+            "f1": 0.998727692771286,
+            "FPR": 8.913178603680205e-05,
+            "FNR": 0.0
+        },
+        {
+            "class_id": 6,
+            "class_name": "DoS attacks-GoldenEye",
+            "support": 6211,
+            "precision": 0.9996779388083736,
+            "recall": 0.9995169859925938,
+            "f1": 0.9995974559214234,
+            "FPR": 2.282354659655273e-06,
+            "FNR": 0.0004830140074062148
+        },
+        {
+            "class_id": 7,
+            "class_name": "DoS attacks-Hulk",
+            "support": 21780,
+            "precision": 0.9997704632052518,
+            "recall": 0.9999081726354454,
+            "f1": 0.9998393131786149,
+            "FPR": 5.80909681324567e-06,
+            "FNR": 9.182736455463728e-05
+        },
+        {
+            "class_id": 1,
+            "class_name": "Bot",
+            "support": 21680,
+            "precision": 0.9999077448221781,
+            "recall": 0.9998616236162362,
+            "f1": 0.9998846836873544,
+            "FPR": 2.323368791813378e-06,
+            "FNR": 0.00013837638376383763
+        },
+        {
+            "class_id": 5,
+            "class_name": "DDOS attack-LOIC-UDP",
+            "support": 259,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "FPR": 0.0,
+            "FNR": 0.0
+        },
+        {
+            "class_id": 13,
+            "class_name": "SSH-Bruteforce",
+            "support": 14107,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "FPR": 0.0,
+            "FNR": 0.0
+        }
+    ],
+    "rare_low_support_classes": [
+        {
+            "class_id": 2,
+            "class_name": "Brute Force -Web",
+            "support": 84,
+            "precision": 0.9482758620689655,
+            "recall": 0.6547619047619048,
+            "f1": 0.7746478873239436
+        },
+        {
+            "class_id": 3,
+            "class_name": "Brute Force -XSS",
+            "support": 34,
+            "precision": 0.96875,
+            "recall": 0.9117647058823529,
+            "f1": 0.9393939393939394
+        },
+        {
+            "class_id": 8,
+            "class_name": "DoS attacks-SlowHTTPTest",
+            "support": 9,
+            "precision": 0.2,
+            "recall": 0.2222222222222222,
+            "f1": 0.21052631578947367
+        },
+        {
+            "class_id": 10,
+            "class_name": "FTP-BruteForce",
+            "support": 8,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+        },
+        {
+            "class_id": 12,
+            "class_name": "SQL Injection",
+            "support": 13,
+            "precision": 0.8461538461538461,
+            "recall": 0.8461538461538461,
+            "f1": 0.8461538461538461
+        }
+    ],
+    "output_directory": "D:\\network_attack_detection\\experiments\\step38_ensemble_validation_error_analysis"
+}

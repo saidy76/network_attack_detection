@@ -1,0 +1,118 @@
+STEP 40 — UNSW-NB15 EXTERNAL / GENERALIZATION VALIDATION
+========================================================================================
+
+PROJECT
+Behaviour Based Network Attack Detection System using Machine Learning
+
+FINAL PRIMARY MODEL
+Tuned Random Forest
+
+EXTERNAL DATASET
+UNSW-NB15
+
+RESEARCH-INTEGRITY RULES
+- CIC-IDS2018 test set was NOT used.
+- No training was performed.
+- No hyperparameter optimization was performed.
+- No model selection was performed using UNSW-NB15.
+- No artificial feature mapping was performed.
+- No unsupported label mapping was performed.
+
+FROZEN CIC FEATURE SCHEMA
+Feature count: 30
+
+  1. Init Fwd Win Byts
+  2. Flow Duration
+  3. Fwd Header Len
+  4. Dst Port
+  5. Bwd Pkts/s
+  6. Fwd IAT Tot
+  7. TotLen Fwd Pkts
+  8. TotLen Bwd Pkts
+  9. Bwd Pkt Len Mean
+ 10. Fwd Seg Size Min
+ 11. Bwd Pkt Len Std
+ 12. Fwd Pkt Len Max
+ 13. Fwd IAT Min
+ 14. Init Bwd Win Byts
+ 15. Fwd Pkt Len Std
+ 16. Pkt Len Mean
+ 17. Tot Fwd Pkts
+ 18. Flow IAT Std
+ 19. Flow Byts/s
+ 20. Bwd IAT Tot
+ 21. Flow IAT Min
+ 22. Tot Bwd Pkts
+ 23. Bwd IAT Min
+ 24. Fwd IAT Std
+ 25. Bwd IAT Std
+ 26. Fwd Act Data Pkts
+ 27. RST Flag Cnt
+ 28. PSH Flag Cnt
+ 29. Idle Mean
+ 30. Down/Up Ratio
+
+UNSW FEATURE SCHEMA
+Candidate feature count: 42
+
+  1. dur
+  2. proto
+  3. service
+  4. state
+  5. spkts
+  6. dpkts
+  7. sbytes
+  8. dbytes
+  9. rate
+ 10. sttl
+ 11. dttl
+ 12. sload
+ 13. dload
+ 14. sloss
+ 15. dloss
+ 16. sinpkt
+ 17. dinpkt
+ 18. sjit
+ 19. djit
+ 20. swin
+ 21. stcpb
+ 22. dtcpb
+ 23. dwin
+ 24. tcprtt
+ 25. synack
+ 26. ackdat
+ 27. smean
+ 28. dmean
+ 29. trans_depth
+ 30. response_body_len
+ 31. ct_srv_src
+ 32. ct_state_ttl
+ 33. ct_dst_ltm
+ 34. ct_src_dport_ltm
+ 35. ct_dst_sport_ltm
+ 36. ct_dst_src_ltm
+ 37. is_ftp_login
+ 38. ct_ftp_cmd
+ 39. ct_flw_http_mthd
+ 40. ct_src_ltm
+ 41. ct_srv_dst
+ 42. is_sm_ips_ports
+
+EXACT FEATURE OVERLAP
+0 / 30
+
+
+STRICT COMPATIBILITY DECISION
+FAIL
+
+FINAL METHODOLOGICAL DECISION
+INCOMPATIBLE — external prediction NOT performed.
+
+INTERPRETATION
+The frozen CIC-IDS2018 model cannot be directly evaluated on UNSW-NB15 without an unsupported feature transformation or retraining. Therefore external accuracy/F1 is intentionally not fabricated.
+
+WHY EXTERNAL PREDICTION WAS NOT PERFORMED
+The frozen CIC-IDS2018 Random Forest expects the 30 selected CIC-IDS2018 features. UNSW-NB15 uses a different feature representation. Predicting UNSW samples by merely selecting similarly named or vaguely related features would change the meaning of the model inputs and invalidate the external evaluation.
+
+RESEARCH CONSEQUENCE
+UNSW-NB15 remains an important external dataset for generalization analysis, but direct evaluation of the frozen CIC-IDS2018 model is not methodologically supported under the current frozen feature pipeline.

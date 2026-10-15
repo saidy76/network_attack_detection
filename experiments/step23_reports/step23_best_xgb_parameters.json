@@ -1,0 +1,50 @@
+{
+    "experiment": "Step23_Tuned_XGBoost",
+    "dataset": "CIC-IDS2018",
+    "training_strategy": "B1_undersampled",
+    "optimization_method": "RandomizedSearchCV",
+    "primary_metric": "f1_macro",
+    "best_cv_macro_f1": 0.8046231422406889,
+    "best_parameters": {
+        "subsample": 0.7,
+        "reg_lambda": 5,
+        "n_estimators": 300,
+        "min_child_weight": 5,
+        "max_depth": 10,
+        "learning_rate": 0.05,
+        "gamma": 0.1,
+        "colsample_bytree": 0.9
+    },
+    "random_state": 42,
+    "n_iter": 12,
+    "cv_folds": 3,
+    "training_samples": 1044091,
+    "validation_samples": 882499,
+    "feature_count": 30,
+    "class_count": 14,
+    "label_encoding": {
+        "BENIGN": 0,
+        "Bot": 1,
+        "Brute Force -Web": 2,
+        "Brute Force -XSS": 3,
+        "DDOS attack-HOIC": 4,
+        "DDOS attack-LOIC-UDP": 5,
+        "DoS attacks-GoldenEye": 6,
+        "DoS attacks-Hulk": 7,
+        "DoS attacks-SlowHTTPTest": 8,
+        "DoS attacks-Slowloris": 9,
+        "FTP-BruteForce": 10,
+        "Infiltration": 11,
+        "SQL Injection": 12,
+        "SSH-Bruteforce": 13
+    },
+    "search_time_hours": 3.453201283481386,
+    "validation_metrics": {
+        "Accuracy": 0.9526163769024101,
+        "Balanced_Accuracy": 0.7642700299193443,
+        "Macro_Precision": 0.7264548567933523,
+        "Macro_Recall": 0.7642700299193443,
+        "Macro_F1": 0.7418650228249453,
+        "Weighted_F1": 0.9595988725619162
+    }
+}

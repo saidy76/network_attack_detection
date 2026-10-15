@@ -1,0 +1,30 @@
+{
+    "step": 27,
+    "model": "LSTM",
+    "validation_samples": 882490,
+    "sequence_length": 10,
+    "features_per_step": 30,
+    "number_of_classes": 14,
+    "metrics": {
+        "accuracy": 0.9667225690942673,
+        "balanced_accuracy": 0.7116542863726297,
+        "macro_precision": 0.7385134552674553,
+        "macro_recall": 0.7116542863726297,
+        "macro_f1": 0.6982536897045052,
+        "weighted_precision": 0.9629565532622736,
+        "weighted_recall": 0.9667225690942673,
+        "weighted_f1": 0.96469967353662,
+        "error_rate": 0.033277430905732645
+    },
+    "confidence": {
+        "mean": 0.8972083330154419,
+        "mean_correct": 0.903788149356842,
+        "mean_incorrect": 0.7060606479644775,
+        "minimum": 0.24752949178218842,
+        "maximum": 1.0,
+        "median": 0.9412408471107483
+    },
+    "best_epoch_from_step26": 14,
+    "model_path": "D:\\network_attack_detection\\experiments\\step26_lstm\\step26_best_lstm.keras",
+    "methodological_note": "Validation results must be interpreted using macro-level metrics and per-class performance because the validation distribution is highly imbalanced."
+}

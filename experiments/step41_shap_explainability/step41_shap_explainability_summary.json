@@ -1,0 +1,174 @@
+{
+    "step": 41,
+    "title": "SHAP Explainability Analysis",
+    "purpose": "Post-hoc explainability of the frozen Step 21 Random Forest using CIC-IDS2018 validation data.",
+    "research_integrity": {
+        "frozen_model_used": true,
+        "model_retrained": false,
+        "hyperparameter_optimization": false,
+        "test_set_used": false,
+        "validation_set_used": true,
+        "feature_selection_changed": false,
+        "data_balancing_performed": false,
+        "model_selection_performed": false
+    },
+    "model": {
+        "type": "RandomForestClassifier",
+        "features": 30,
+        "classes": [
+            "BENIGN",
+            "Bot",
+            "Brute Force -Web",
+            "Brute Force -XSS",
+            "DDOS attack-HOIC",
+            "DDOS attack-LOIC-UDP",
+            "DoS attacks-GoldenEye",
+            "DoS attacks-Hulk",
+            "DoS attacks-SlowHTTPTest",
+            "DoS attacks-Slowloris",
+            "FTP-BruteForce",
+            "Infiltration",
+            "SQL Injection",
+            "SSH-Bruteforce"
+        ],
+        "n_estimators": 150
+    },
+    "shap": {
+        "version": "0.52.0",
+        "explainer": "TreeExplainer",
+        "sample_size": 5000,
+        "random_state": 42,
+        "array_shape": [
+            5000,
+            30,
+            14
+        ]
+    },
+    "global_explainability": {
+        "top_feature": "Init Fwd Win Byts",
+        "top_10_features": [
+            "Init Fwd Win Byts",
+            "Dst Port",
+            "Fwd Seg Size Min",
+            "RST Flag Cnt",
+            "Flow Duration",
+            "Fwd Header Len",
+            "Bwd Pkt Len Std",
+            "Fwd Act Data Pkts",
+            "Bwd Pkt Len Mean",
+            "Fwd IAT Tot"
+        ]
+    },
+    "classwise_top_features": {
+        "BENIGN": [
+            "Dst Port",
+            "Init Fwd Win Byts",
+            "Fwd Seg Size Min",
+            "RST Flag Cnt",
+            "Flow Duration"
+        ],
+        "Bot": [
+            "Dst Port",
+            "RST Flag Cnt",
+            "Init Fwd Win Byts",
+            "Fwd Seg Size Min",
+            "Bwd Pkts/s"
+        ],
+        "Brute Force -Web": [
+            "RST Flag Cnt",
+            "Init Fwd Win Byts",
+            "Dst Port",
+            "Fwd Seg Size Min",
+            "Fwd Pkt Len Std"
+        ],
+        "Brute Force -XSS": [
+            "Dst Port",
+            "Fwd IAT Min",
+            "Init Fwd Win Byts",
+            "Fwd Seg Size Min",
+            "Flow Duration"
+        ],
+        "DDOS attack-HOIC": [
+            "Init Fwd Win Byts",
+            "Dst Port",
+            "Fwd Header Len",
+            "Bwd Pkt Len Std",
+            "Fwd IAT Tot"
+        ],
+        "DDOS attack-LOIC-UDP": [
+            "Init Fwd Win Byts",
+            "Fwd Act Data Pkts",
+            "Fwd Header Len",
+            "Dst Port",
+            "Fwd Seg Size Min"
+        ],
+        "DoS attacks-GoldenEye": [
+            "Fwd Seg Size Min",
+            "Dst Port",
+            "Init Fwd Win Byts",
+            "Fwd Header Len",
+            "Flow Duration"
+        ],
+        "DoS attacks-Hulk": [
+            "Fwd Seg Size Min",
+            "Dst Port",
+            "Init Fwd Win Byts",
+            "Flow Duration",
+            "Fwd Header Len"
+        ],
+        "DoS attacks-SlowHTTPTest": [
+            "Init Fwd Win Byts",
+            "Dst Port",
+            "Fwd Seg Size Min",
+            "Fwd IAT Tot",
+            "Fwd IAT Min"
+        ],
+        "DoS attacks-Slowloris": [
+            "Fwd Seg Size Min",
+            "Dst Port",
+            "Init Fwd Win Byts",
+            "Bwd Pkt Len Std",
+            "Fwd IAT Min"
+        ],
+        "FTP-BruteForce": [
+            "Dst Port",
+            "Init Fwd Win Byts",
+            "Fwd Seg Size Min",
+            "Fwd IAT Tot",
+            "Fwd IAT Min"
+        ],
+        "Infiltration": [
+            "Init Fwd Win Byts",
+            "RST Flag Cnt",
+            "Dst Port",
+            "Fwd Seg Size Min",
+            "Bwd Pkt Len Std"
+        ],
+        "SQL Injection": [
+            "Dst Port",
+            "RST Flag Cnt",
+            "Init Fwd Win Byts",
+            "Fwd IAT Tot",
+            "Fwd Seg Size Min"
+        ],
+        "SSH-Bruteforce": [
+            "Fwd Act Data Pkts",
+            "Init Fwd Win Byts",
+            "Fwd Seg Size Min",
+            "Dst Port",
+            "TotLen Bwd Pkts"
+        ]
+    },
+    "outputs": {
+        "global_feature_importance": "step41_global_feature_importance.csv",
+        "classwise_feature_importance": "step41_classwise_feature_importance.csv",
+        "top_features_by_class": "step41_top_features_by_class.csv",
+        "top_20_features": "step41_top_20_features.csv",
+        "global_shap_plot": "step41_global_shap_importance.png",
+        "shap_summary_plot": "step41_shap_summary.png",
+        "local_explanations": "step41_local_explanations.csv",
+        "shap_vs_rf_importance": "step41_shap_vs_rf_importance.csv",
+        "sample_predictions": "step41_shap_sample_predictions.csv"
+    },
+    "interpretation_note": "SHAP values provide post-hoc feature-attribution evidence for the frozen Random Forest. Global importance is computed as mean absolute SHAP magnitude across validation samples and output classes. Class-specific rankings preserve attack-class differences. SHAP explanations do not imply causality."
+}

@@ -1,0 +1,75 @@
+{
+    "step": "31",
+    "experiment": "Equal_Weight_Probability_Fusion",
+    "dataset": "CIC-IDS2018",
+    "training_representation": "B1_undersampled",
+    "evaluation_dataset": "CICIDS2018_validation_selected.csv",
+    "feature_count": 30,
+    "class_count": 14,
+    "random_state": 42,
+    "models": {
+        "random_forest": "Step21 tuned Random Forest",
+        "xgboost": "Step23 tuned XGBoost"
+    },
+    "fusion_method": "Weighted arithmetic mean of class probabilities",
+    "fusion_weights": {
+        "Random_Forest": 0.5,
+        "XGBoost": 0.5
+    },
+    "weight_optimization": false,
+    "validation_used_for_weight_tuning": false,
+    "test_set_used": false,
+    "additional_training": false,
+    "additional_balancing": false,
+    "smote_used": false,
+    "threshold_manipulation": false,
+    "validation_samples": 882499,
+    "metrics": {
+        "Random_Forest": {
+            "Accuracy": 0.9528124111188795,
+            "Balanced_Accuracy": 0.7909960318842203,
+            "Macro_Precision": 0.7993259925674925,
+            "Macro_Recall": 0.7909960318842203,
+            "Macro_F1": 0.7904989762654928,
+            "Weighted_F1": 0.9599638953076722
+        },
+        "XGBoost": {
+            "Accuracy": 0.9526163769024101,
+            "Balanced_Accuracy": 0.7642700299193443,
+            "Macro_Precision": 0.7264548567933523,
+            "Macro_Recall": 0.7642700299193443,
+            "Macro_F1": 0.7418650228249453,
+            "Weighted_F1": 0.9595988725619162
+        },
+        "Probability_Fusion": {
+            "Accuracy": 0.9539330922754586,
+            "Balanced_Accuracy": 0.7738586403293075,
+            "Macro_Precision": 0.7913031150948323,
+            "Macro_Recall": 0.7738586403293075,
+            "Macro_F1": 0.7781435413898342,
+            "Weighted_F1": 0.9605913961156035
+        }
+    },
+    "macro_f1_comparison": {
+        "Random_Forest": 0.7904989762654928,
+        "XGBoost": 0.7418650228249453,
+        "Probability_Fusion": 0.7781435413898342,
+        "Fusion_minus_RF": -0.0123554348756586,
+        "Fusion_minus_XGB": 0.03627851856488895
+    },
+    "per_class_wins": {
+        "Random_Forest": 5,
+        "XGBoost": 1,
+        "Probability_Fusion": 3,
+        "Tie": 5
+    },
+    "probability_statistics": {
+        "mean_max_probability": 0.9148454555597965,
+        "median_max_probability": 0.9940193162921421,
+        "minimum_max_probability": 0.2812579559687227,
+        "maximum_max_probability": 0.9999921691765439,
+        "mean_entropy": 0.19792213374803197
+    },
+    "primary_result": "Fusion does not improve over Random Forest",
+    "runtime_seconds": 41.44597625732422
+}

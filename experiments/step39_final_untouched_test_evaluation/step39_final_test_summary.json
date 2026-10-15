@@ -1,0 +1,111 @@
+{
+  "step": 39,
+  "status": "COMPLETED",
+  "final_candidate": "Tuned Random Forest",
+  "test_set_used": true,
+  "training_performed": false,
+  "hyperparameter_optimization": false,
+  "model_selection_using_test": false,
+  "metrics": {
+    "accuracy": 0.9525507082152974,
+    "balanced_accuracy": 0.8255625180926088,
+    "macro_precision": 0.8276492182158928,
+    "macro_recall": 0.8255625180926088,
+    "macro_f1": 0.8230109293511854,
+    "weighted_f1": 0.9597619543174821,
+    "roc_auc_ovr_macro": 0.9937209920381556,
+    "roc_auc_ovr_weighted": 0.9853389428009243,
+    "pr_auc_ap_macro": 0.8469695703770822,
+    "pr_auc_ap_weighted": 0.9807322460391559
+  },
+  "infiltration": {
+    "class_name": "Infiltration",
+    "class_id": 11,
+    "support": 21092,
+    "precision": 0.24671916010498687,
+    "recall": 0.4768632656931538,
+    "f1": 0.3251911605425241,
+    "FPR": 0.035649773394256845,
+    "FNR": 0.5231367343068462,
+    "TP": 10058,
+    "FN": 11034,
+    "FP": 30709,
+    "TN": 830699,
+    "benign_to_infiltration": 30708,
+    "infiltration_to_benign": 11032
+  },
+  "validation_comparison": [
+    {
+      "metric": "accuracy",
+      "validation": 0.952812,
+      "untouched_test": 0.9525507082152974,
+      "test_minus_validation": -0.0002612917847025775,
+      "absolute_gap": 0.0002612917847025775
+    },
+    {
+      "metric": "balanced_accuracy",
+      "validation": 0.790996,
+      "untouched_test": 0.8255625180926088,
+      "test_minus_validation": 0.0345665180926088,
+      "absolute_gap": 0.0345665180926088
+    },
+    {
+      "metric": "macro_precision",
+      "validation": 0.799326,
+      "untouched_test": 0.8276492182158928,
+      "test_minus_validation": 0.028323218215892787,
+      "absolute_gap": 0.028323218215892787
+    },
+    {
+      "metric": "macro_recall",
+      "validation": 0.790996,
+      "untouched_test": 0.8255625180926088,
+      "test_minus_validation": 0.0345665180926088,
+      "absolute_gap": 0.0345665180926088
+    },
+    {
+      "metric": "macro_f1",
+      "validation": 0.790499,
+      "untouched_test": 0.8230109293511854,
+      "test_minus_validation": 0.03251192935118541,
+      "absolute_gap": 0.03251192935118541
+    },
+    {
+      "metric": "weighted_f1",
+      "validation": 0.959964,
+      "untouched_test": 0.9597619543174821,
+      "test_minus_validation": -0.0002020456825179151,
+      "absolute_gap": 0.0002020456825179151
+    },
+    {
+      "metric": "roc_auc_ovr_macro",
+      "validation": 0.993759,
+      "untouched_test": 0.9937209920381556,
+      "test_minus_validation": -3.800796184438848e-05,
+      "absolute_gap": 3.800796184438848e-05
+    },
+    {
+      "metric": "roc_auc_ovr_weighted",
+      "validation": 0.985419,
+      "untouched_test": 0.9853389428009243,
+      "test_minus_validation": -8.005719907577813e-05,
+      "absolute_gap": 8.005719907577813e-05
+    },
+    {
+      "metric": "pr_auc_ap_macro",
+      "validation": 0.831159,
+      "untouched_test": 0.8469695703770822,
+      "test_minus_validation": 0.015810570377082223,
+      "absolute_gap": 0.015810570377082223
+    },
+    {
+      "metric": "pr_auc_ap_weighted",
+      "validation": 0.980744,
+      "untouched_test": 0.9807322460391559,
+      "test_minus_validation": -1.1753960844074207e-05,
+      "absolute_gap": 1.1753960844074207e-05
+    }
+  ],
+  "output_directory": "D:\\network_attack_detection\\experiments\\step39_final_untouched_test_evaluation",
+  "runtime_seconds": 24.206530699972063
+}

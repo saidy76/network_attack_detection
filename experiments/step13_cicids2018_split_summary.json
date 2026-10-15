@@ -1,0 +1,52 @@
+{
+    "step": 13,
+    "dataset": "CIC-IDS2018",
+    "input": "CICIDS2018_clean.csv",
+    "target": "Label",
+    "random_state": 42,
+    "split_method": "stratified_random_split",
+    "split_ratio": {
+        "train": 0.7,
+        "validation": 0.15,
+        "test": 0.15
+    },
+    "original_rows": 5883327,
+    "train_rows": 4118328,
+    "validation_rows": 882499,
+    "test_rows": 882500,
+    "num_classes": 14,
+    "classes": [
+        "BENIGN",
+        "Bot",
+        "Brute Force -Web",
+        "Brute Force -XSS",
+        "DDOS attack-HOIC",
+        "DDOS attack-LOIC-UDP",
+        "DoS attacks-GoldenEye",
+        "DoS attacks-Hulk",
+        "DoS attacks-SlowHTTPTest",
+        "DoS attacks-Slowloris",
+        "FTP-BruteForce",
+        "Infiltration",
+        "SQL Injection",
+        "SSH-Bruteforce"
+    ],
+    "duplicate_overlap": {
+        "train_validation": 0,
+        "train_test": 0,
+        "validation_test": 0
+    },
+    "feature_selection": false,
+    "smote": false,
+    "model_training": false,
+    "data_leakage_policy": {
+        "test_used_for_feature_selection": false,
+        "test_used_for_tuning": false,
+        "test_used_for_model_selection": false
+    },
+    "output_files": {
+        "train": "C:\\Users\\DELL\\OneDrive\\Desktop\\network_attack_detection\\data\\modeling\\CICIDS2018_train.csv",
+        "validation": "C:\\Users\\DELL\\OneDrive\\Desktop\\network_attack_detection\\data\\modeling\\CICIDS2018_validation.csv",
+        "test": "C:\\Users\\DELL\\OneDrive\\Desktop\\network_attack_detection\\data\\modeling\\CICIDS2018_test.csv"
+    }
+}

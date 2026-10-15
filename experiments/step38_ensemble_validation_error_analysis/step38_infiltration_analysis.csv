@@ -1,0 +1,2 @@
+class,support,rf_TP,rf_FN,rf_FP,rf_recall,rf_precision,fusion_TP,fusion_FN,fusion_FP,fusion_recall,fusion_precision
+Infiltration,21091,10147,10944,30554,0.4811056848892893,0.24930591385961032,10147,10944,30554,0.4811056848892893,0.24930591385961032

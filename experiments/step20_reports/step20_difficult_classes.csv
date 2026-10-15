@@ -1,0 +1,6 @@
+Experiment,Strategy,Model,Class_ID,Label,Precision,Recall,F1,Support,F1_Gap_From_Perfect,Recall_Gap_From_Perfect,Precision_Gap_From_Perfect,Difficulty_Score
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,8,DoS attacks-SlowHTTPTest,0.0,0.0,0.0,9,1.0,1.0,1.0,1.0
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,10,FTP-BruteForce,0.125,0.125,0.125,8,0.875,0.875,0.875,0.875
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,11,Infiltration,0.1667695606966467,0.486700488359964,0.2484178938325085,21091,0.7515821061674914,0.5132995116400361,0.8332304393033533,0.6562690683565092
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,12,SQL Injection,0.6923076923076923,0.6923076923076923,0.6923076923076923,13,0.3076923076923077,0.3076923076923077,0.3076923076923077,0.3076923076923077
+B1_undersampled_RandomForest,B1_undersampled,RandomForest,2,Brute Force -Web,0.6326530612244898,0.7380952380952381,0.6813186813186813,84,0.31868131868131866,0.26190476190476186,0.36734693877551017,0.2959706959706959

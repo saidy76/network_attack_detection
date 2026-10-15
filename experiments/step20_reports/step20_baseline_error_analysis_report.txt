@@ -1,0 +1,66 @@
+STEP 20A - BASELINE ERROR ANALYSIS
+==============================================================================
+
+Project: Behaviour Based Network Attack Detection System using Machine Learning
+
+Dataset: CIC-IDS2018
+Task: 14-class multiclass classification
+Evaluation protocol: fixed validation set
+Test data: untouched
+
+CURRENT BASELINE
+------------------------------------------------------------------------------
+Experiment       : B1_undersampled_RandomForest
+Accuracy         : 0.929499
+Balanced Accuracy: 0.779587
+Macro Precision  : 0.752717
+Macro Recall     : 0.779587
+Macro F1         : 0.760217
+Weighted F1      : 0.945773
+
+MINORITY CLASS SUMMARY
+------------------------------------------------------------------------------
+minority_class_count: 8
+minority_mean_f1: 0.6795990698887392
+minority_median_f1: 0.8167420814479638
+minority_min_f1: 0.0
+minority_max_f1: 1.0
+
+DIFFICULT CLASSES
+------------------------------------------------------------------------------
+DoS attacks-SlowHTTPTest | Precision=0.000000 | Recall=0.000000 | F1=0.000000 | Support=9
+FTP-BruteForce | Precision=0.125000 | Recall=0.125000 | F1=0.125000 | Support=8
+Infiltration | Precision=0.166770 | Recall=0.486700 | F1=0.248418 | Support=21091
+SQL Injection | Precision=0.692308 | Recall=0.692308 | F1=0.692308 | Support=13
+Brute Force -Web | Precision=0.632653 | Recall=0.738095 | F1=0.681319 | Support=84
+
+TOP CONFUSION PAIRS
+------------------------------------------------------------------------------
+BENIGN -> Infiltration | count=51286 | error_rate=0.066961
+Infiltration -> BENIGN | count=10826 | error_rate=0.513300
+BENIGN -> Brute Force -Web | count=33 | error_rate=0.000043
+Brute Force -Web -> BENIGN | count=19 | error_rate=0.226190
+BENIGN -> Bot | count=8 | error_rate=0.000010
+FTP-BruteForce -> DoS attacks-SlowHTTPTest | count=7 | error_rate=0.875000
+DoS attacks-SlowHTTPTest -> FTP-BruteForce | count=7 | error_rate=0.777778
+BENIGN -> DoS attacks-Slowloris | count=5 | error_rate=0.000007
+SQL Injection -> Brute Force -Web | count=3 | error_rate=0.230769
+DoS attacks-GoldenEye -> DoS attacks-Hulk | count=3 | error_rate=0.000483
+BENIGN -> SQL Injection | count=3 | error_rate=0.000004
+DoS attacks-SlowHTTPTest -> SSH-Bruteforce | count=2 | error_rate=0.222222
+Brute Force -XSS -> BENIGN | count=2 | error_rate=0.058824
+DoS attacks-Slowloris -> BENIGN | count=2 | error_rate=0.001346
+BENIGN -> DoS attacks-Hulk | count=2 | error_rate=0.000003
+
+METHODOLOGICAL STATUS
+------------------------------------------------------------------------------
+Step 20A performs analysis only.
+No model was retrained.
+No hyperparameter tuning was performed.
+No test data was loaded.
+No validation balancing was performed.
+No feature selection was performed.
+
+NEXT STEP
+------------------------------------------------------------------------------
+STEP 20B - Evidence-based Random Forest hyperparameter optimization design.

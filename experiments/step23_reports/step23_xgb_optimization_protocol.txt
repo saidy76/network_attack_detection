@@ -1,0 +1,75 @@
+
+STEP 23 - CONTROLLED XGBOOST HYPERPARAMETER OPTIMIZATION
+
+Dataset:
+CIC-IDS2018
+
+Training representation:
+B1 undersampled
+
+Features:
+30
+
+Classes:
+14
+
+Label encoding:
+Fixed 14-class mapping.
+String labels converted to integer IDs 0-13.
+
+Optimization:
+RandomizedSearchCV
+
+Primary metric:
+Macro F1
+
+Cross-validation:
+Stratified 3-fold
+
+Randomized configurations:
+12
+
+Total model fits:
+36
+
+Random state:
+42
+
+Validation dataset:
+Used only after hyperparameter selection.
+
+Test dataset:
+NOT USED.
+
+Feature selection:
+NOT PERFORMED.
+
+Additional balancing:
+NOT PERFORMED.
+
+SMOTE:
+NOT USED.
+
+Search time hours:
+3.4532
+
+Best CV Macro F1:
+0.804623
+
+Validation Accuracy:
+0.952616
+
+Validation Balanced Accuracy:
+0.764270
+
+Validation Macro Precision:
+0.726455
+
+Validation Macro Recall:
+0.764270
+
+Validation Macro F1:
+0.741865
+
+Validation Weighted F1:
+0.959599

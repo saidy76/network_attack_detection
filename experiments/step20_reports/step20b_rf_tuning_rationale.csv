@@ -1,0 +1,9 @@
+Parameter,Evidence,Research_Rationale,Search_Values
+n_estimators,Baseline RF shows strong majority-class performance but unstable rare-class behavior.,Increasing tree count can reduce variance and stabilize ensemble predictions.,"300, 500, 800"
+max_depth,"BENIGN and several large attack classes have near-perfect scores, while difficult classes remain weak.",Controlled tree depth can test whether reduced complexity improves generalization.,"None, 20, 30, 40"
+min_samples_split,Rare attack classes have extremely small supports.,Larger split thresholds can suppress highly specific partitions that may generalize poorly.,"2, 5, 10"
+min_samples_leaf,Rare classes such as FTP-BruteForce and SlowHTTPTest show extremely poor F1.,Testing larger leaf sizes evaluates whether smoother decision boundaries improve generalization.,"1, 2, 5"
+max_features,The dataset contains many correlated flow features.,Feature subsampling changes tree diversity and can reduce correlated-tree behavior.,"sqrt, log2, 0.5"
+criterion,Current baseline performance is highly asymmetric across classes.,Different split criteria may produce different class separability.,"gini, entropy"
+class_weight,Strong class imbalance and poor minority-class recall.,Balanced weighting explicitly increases the learning importance of underrepresented classes.,"None, balanced, balanced_subsample"
+min_impurity_decrease,The model separates several dominant classes extremely well but struggles with minority classes.,A small regularization threshold can test whether weak splits are contributing to overfitting.,"0, 1e-7, 1e-6"

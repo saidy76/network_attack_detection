@@ -1,0 +1,40 @@
+{
+    "step": 17,
+    "dataset": "CIC-IDS2018",
+    "input": "data/modeling/CICIDS2018_train_selected.csv",
+    "training_only": true,
+    "validation_used": false,
+    "test_used": false,
+    "smote_used": false,
+    "random_state": 42,
+    "original_rows": 4118328,
+    "original_features": 30,
+    "number_of_classes": 14,
+    "strategies": {
+        "B0": {
+            "name": "Original imbalanced training",
+            "sampling": "none"
+        },
+        "B1": {
+            "name": "Controlled majority undersampling",
+            "benign_target": 500000
+        },
+        "B2": {
+            "name": "Hybrid controlled sampling",
+            "benign_target": 500000,
+            "rare_target": 5000,
+            "extremely_rare_policy": "preserve original observations"
+        },
+        "B3": {
+            "name": "Class-weight baseline",
+            "sampling": "none"
+        }
+    },
+    "outputs": {
+        "B0": "data/modeling/balanced\\CICIDS2018_train_B0_original.csv",
+        "B1": "data/modeling/balanced\\CICIDS2018_train_B1_undersampled.csv",
+        "B2": "data/modeling/balanced\\CICIDS2018_train_B2_hybrid.csv",
+        "class_weights": "experiments\\step17_cicids2018_class_weights.csv",
+        "comparison": "experiments\\step17_cicids2018_strategy_comparison.csv"
+    }
+}

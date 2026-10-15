@@ -1,0 +1,62 @@
+STEP 36 - HETEROGENEOUS MODEL COMPARISON
+=========================================
+
+Project:
+Behaviour Based Network Attack Detection System using Machine Learning
+
+Purpose:
+Scientific comparison of the three heterogeneous tabular learners:
+1. Tuned Random Forest
+2. Tuned XGBoost
+3. Controlled LightGBM
+
+Validation protocol:
+- Validation data only
+- No test-set data used
+- No additional model training
+- No hyperparameter optimization
+- Same multiclass problem
+- Same 14-class taxonomy
+- Primary selection metric: Macro F1
+- Secondary metrics:
+  Balanced Accuracy
+  Macro Precision
+  Macro Recall
+  Weighted F1
+
+Primary validation winner:
+Tuned Random Forest
+
+Primary Macro F1:
+0.790499
+
+Model Macro F1:
+RF        = 0.790499
+XGBoost   = 0.741865
+LightGBM  = 0.288712
+
+Infiltration:
+Support = 21091
+RF F1 = 0.328424
+XGB F1 = 0.316404
+LightGBM F1 = 0.050462
+
+Scientific conclusion:
+Random Forest is the strongest validation model by Macro F1.
+XGBoost provides a heterogeneous complementary learner candidate.
+LightGBM is substantially weaker in the current controlled experiment
+and should not be included in the final ensemble solely because it is
+a third model.
+
+Step 37 recommendation:
+Evaluate RF + XGBoost as the principal heterogeneous ensemble candidate.
+Final inclusion must be determined empirically from validation results,
+particularly Macro F1, Balanced Accuracy, difficult-class performance,
+and prediction-level complementarity where aligned predictions are
+available.
+
+Research integrity:
+- No test-set usage
+- No leakage
+- No additional tuning
+- No fabricated complementarity claims
